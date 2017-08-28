@@ -4,7 +4,33 @@ August 28, 2017
 
 
 
-## R Markdown
+## HKR 6130 - Computer Applications for Physical Activity Measurement and Intervention
+
+### Instructors
+Dr. Daniel Fuller
+E-mail: dfuller@mun.ca
+Office: PE2023
+
+Dr.	Henry Luan
+E-mail: hluan@mun.ca
+Office: PE1007
+
+### Course Description
+This course will introduce students to physical activity measurement using accelerometer devices including smartphones, smartwatches. I will also introduce students to measuring spatial location using Global Positioning Systems. The course will explore conceptual aspects of physical activity and spatial location measurement. Students will design, conduct, and analyse data for a small-scale intervention collecting accelerometer measured physical activity and GPS data. Students will learn programming in R and ArcGIS for spatial analysis methods. 
+
+Course Objectives
+Upon completion of this course, students will be able to: 
+•	Demonstrate an understanding of objective physical activity and spatial location measurement
+•	Compare and contrast available technologies for physical activity measurement
+•	Basic programming in R and QGIS
+•	Design, conduct, and analyse data from a small-scale intervention using smart devices
+
+III. Format and Procedures:
+This class will feature in-class lectures and discussions, labs, self-directed data collection and analysis. 
+
+IV. Course Text:
+There is no specific text for this course. A list of readings will provided for relevant in class sessions. Resources to help with software applications will also be provided.
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
