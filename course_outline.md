@@ -48,6 +48,8 @@ Final Article  | 12    | 20%      |
 
 I purposefuly do not have due dates or deadlines for my courses. You will have the most success with this course if you submit the assignments the weeks they are presented in the course. There will be a steep learning curve for R. It will hurt. The faster you get over the learning curve, the easier, and more fun, your life will be in this course.  
 
+***
+
 #### Blog 1 (5%)
 
 1. Choose a blogging platform or website platform. I recommend using [Blogger](https://www.blogger.com/) or [Wordpress](https://wordpress.com/). 
@@ -83,11 +85,28 @@ I purposefuly do not have due dates or deadlines for my courses. You will have t
 #### Study Proposal	(15%)
 
 1. Write a 2 page study proposal for your *n of 1* study. Describe the following in detail: 
-    i) 
+    i) The intervention you will be subjecting yourself to
+    ii) The app you will be using for data collecting
+    iii) Your data analysis plan
+    iiii) Your contigency plan for the app bonks
 
-GIS Tutorial	6	10%
-GPS Data	7	10%
-Final Article	12	20%
+#### GIS Tutorial	(10%)
 
+1. Complete the GIS tutorial using **XYZ**.
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
 
+#### GIS Data	(10%)
 
+1. Complete the GIS data analysis lab using **XYZ**.
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+
+#### Final Article (20%)
+
+1. Write a final report (4-6 pages) detailing your study methods, data analysis, results, and conclusion. 
+2. Use R and RMarkdown to write the report. If you have maps or other images you can upload them to wordpress or blogger and link to those images in the RMarkdown file. 
+3. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+
+![Shot Put](http://images.complex.com/complex/image/upload/c_limit,w_680/fl_lossy,pg_1,q_auto/cvv8cts2bogemlyduqat.jpg)  
+    [Shot Put](http://weknowmemes.com/2012/06/ermagerd-shertpert/)
+
+***
