@@ -24,3 +24,70 @@ This course will introduce students to physical activity measurement using accel
 2. Compare and contrast available technologies for physical activity measurement  
 3. Basic programming in R and QGIS  
 4. Design, conduct, and analyse data from a small-scale intervention using smart devices  
+
+
+### Academic Integrity
+Each student in this course is expected to abide by the [Memorial University’s Code of Conduct](http://www.mun.ca/student/sscm/conduct/). You are encouraged to study together and to discuss information and concepts covered in lecture and the sections with other students. You can give "consulting" help to or receive "consulting" help from such students. However, any work submitted by a student in this course for academic credit will be the student's own work.
+
+### Accommodations for students with disabilities
+In compliance with the Memorial University’s policy and equal access laws, it is understood that appropriate academic accommodations may be required for student with disabilities. Please see the [guide](http://www.mun.ca/policy/site/policy.php?id=239) for full details.
+
+### Course Evaluations
+
+Task   | Week | Percent | 
+-----  |------|---------|
+Blog 1 | 1    | 5%      |
+R tutorial  | 2    | 10%      |
+Blog 2  | 3    | 5%      |
+App Review  | 10    | 15%      |
+Geneactiv Data  | 4    | 10%      |
+Study Proposal  | 5    | 15%      |
+GIS Tutorial  | 6    | 10%      |
+GPS Data  | 7    | 10%      |
+Final Article  | 12    | 20%      |
+
+I purposefuly do not have due dates or deadlines for my courses. You will have the most success with this course if you submit the assignments the weeks they are presented in the course. There will be a steep learning curve for R. It will hurt. The faster you get over the learning curve, the easier, and more fun, your life will be in this course.  
+
+#### Blog 1 (5%)
+
+1. Choose a blogging platform or website platform. I recommend using [Blogger](https://www.blogger.com/) or [Wordpress](https://wordpress.com/). 
+2. Write a blog post (max 500 words) describing the main discussion points the week 1 readings.
+3. Post the link to the D2L Discussion Forum *Blog post links*.
+ 
+#### R tutorial (10%)
+
+1. Complete the R and RMarkdown tutorial.
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+
+#### Blog 2 (5%)
+
+1. Write a blog post (max 500 words) describing the main discussion points the week 2 readings.
+2. Post the link to the Brightspace Discussion Forum *Blog post links*.
+
+#### Geneactiv Data (10%)
+
+1. Complete the Geneactiv data analysis lab using R and RMarkdown.
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+
+#### App Review (15%)
+
+1. Conduct a review of 5-10 (minimum 5, maximum 10) apps for collecting physical activity and spatial location data in the Google Play or Apple App Store. The review should include the following: 
+    i) App developer information: Who developed the app? 
+    ii) Cost: How much does the app cost? 
+    iii) Data availability: Can the user access their own data? In what formats? 
+    iiii) Privacy policy: Does the developer sell the data to third parties? 
+    iiiii) Usage: Is it feasible to use the app for your research project? What are the advantages/disadvantages? 
+2. Chose 2 of the apps and collect 1 day of data using your phone. Present a brief overview of the data using R and RMarkdown. 
+3. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+
+#### Study Proposal	(15%)
+
+1. Write a 2 page study proposal for your *n of 1* study. Describe the following in detail: 
+    i) 
+
+GIS Tutorial	6	10%
+GPS Data	7	10%
+Final Article	12	20%
+
+
+
