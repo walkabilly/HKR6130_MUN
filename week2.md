@@ -65,7 +65,7 @@ Code  | Action
 ------------- | -------------
 +  | Addition
 -  | Subtraction
-_*_  | Multiplication
+*  | Multiplication
 /  | Division
 ^  | Raise to the power of
 
