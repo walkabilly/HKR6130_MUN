@@ -610,3 +610,17 @@ nrow(join_inner_nl)
 ```
 
 Yes! 
+
+#### Full join
+
+
+```r
+join_full_nl_2 <- full_join(nl_weight1, nl_height1, by="CASEID")
+nrow(join_full_nl_2)
+```
+
+```
+## [1] 3625
+```
+
+Now if we do the full join we can see we retain all of the data despite there being missing and non complete data in both dataframes we want to merge. 
