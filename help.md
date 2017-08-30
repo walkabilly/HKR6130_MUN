@@ -27,7 +27,7 @@ If you are completely lost or stuck with your data wrangling or analysis there a
 
 ### Stackoverflow
 
-1. If you are really stuck, have posted your question to Slack, I can't figure it out, you read a bunch of tutorials, and still can't figure it out, it's time to turn to your friends on [Stackoverflow](https://stackoverflow.com/). Stackoverflow is an online community for asking questions and getting help about code. Follow these rules: 
+1. If you are really stuck, have posted your question to Slack, I can't figure it out, you read a bunch of tutorials, and still can't figure it out, it's time to turn to your friends on [Stackoverflow](https://stackoverflow.com/). Stackoverflow is an online community for asking questions and getting help about code. Follow these rules:  
     i) Search to see your question has been asked
     ii) [Ask a good question](https://stackoverflow.com/help/how-to-ask)
     iii) Create a [reproducible example](https://stackoverflow.com/help/mcve) 
