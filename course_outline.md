@@ -32,6 +32,23 @@ Each student in this course is expected to abide by the [Memorial University’s
 ### Accommodations for students with disabilities
 In compliance with the Memorial University’s policy and equal access laws, it is understood that appropriate academic accommodations may be required for student with disabilities. Please see the [guide](http://www.mun.ca/policy/site/policy.php?id=239) for full details.
 
+### Course Timeline
+
+Topic   | Week |  
+-----  |------|
+Physical activity and spatial location measurement | 1    |
+Getting started in R  | 2    | 
+Intervention design  | 3    | 
+Accelemerometer data in R  | 4    |
+Intervention evaluation 1 | 5    |
+Mobile apps | 6 |
+Geography concepts   | 7    | 
+Getting started with GPS  | 9    | 
+GPS data in R  | 9    | 
+Intervention evaluation 2  | 10   | 
+All the data  | 11    | 
+Intervention theory  | 12    | 
+
 ### Course Evaluations
 
 Task   | Week | Percent | 
@@ -39,14 +56,16 @@ Task   | Week | Percent |
 Blog 1 | 1    | 5%      |
 R tutorial  | 2    | 10%      |
 Blog 2  | 3    | 5%      |
-App Review  | 10    | 15%      |
+App Review  | 7    | 15%      |
 Geneactiv Data  | 4    | 10%      |
-Study Proposal  | 5    | 15%      |
-GIS Tutorial  | 6    | 10%      |
-GPS Data  | 7    | 10%      |
+Study Proposal  | 7    | 15%      |
+GIS Tutorial  | 9    | 10%      |
+GPS Data  | 10    | 10%      |
 Final Article  | 12    | 20%      |
 
 I purposefuly do not have due dates or deadlines for my courses. You will have the most success with this course if you submit the assignments the weeks they are presented in the course. There will be a steep learning curve for R. It will hurt. The faster you get over the learning curve, the easier, and more fun, your life will be in this course.  
+
+There are no specific formatting rules or guidelines for the course related to references. Use some type of reference formatting, APA and AMA are good choices. You will be using Markdown for most of the work so formatting mostly takes care of itself. 
 
 ***
 
