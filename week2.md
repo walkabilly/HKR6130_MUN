@@ -61,13 +61,13 @@ You can use R as a basic calculator. If you pass the command 2+2 it will return 
 
 You can use arithmetic and mathematical operators in your commands  
 
-Code  | Action
-------------- | -------------
-+  | Addition
--  | Subtraction
-*  | Multiplication
-/  | Division
-^  | Raise to the power of
+| Code  | Action |
+| --- | --- |
+| +  | Addition |
+| -  | Subtraction |
+| *  | Multiplication |
+| /  | Division |
+| ^  | Raise to the power of |
 
 ## Assignment and Variables
 
