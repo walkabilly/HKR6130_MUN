@@ -407,7 +407,7 @@ plot(scatter_clean)
 
 ![](week2_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
-What if we wanted to see how BMI categories were distributed along with height and weight scatter plot. We can add a colour aesthetic using the `bmi_cat` variable `aes(colour = factor(c_bmi))` to the `geom_point` command to get colours by BMI category. There are many ways to change the colour scheme but I'm not going into that at the moment.  I also added the `alpha` command, which lightens the points so we can get a better sense of where the data are sparse. 
+What if we wanted to see how BMI categories were distributed along with height and weight scatter plot. We can add a colour aesthetic using the `bmi_cat` variable `aes(colour = factor(bmi_cat))` to the `geom_point` command to get colours by BMI category. There are many ways to change the colour scheme but I'm not going into that at the moment.  I also added the `alpha` command, which lightens the points so we can get a better sense of where the data are sparse. 
 
 
 ```r
@@ -445,24 +445,25 @@ bmi_prov <- cchs %>%
               sd_BMI = sd(bmi, na.rm=TRUE),
               total = n())
 
-knitr::kable(bmi_prov)
+bmi_prov
 ```
 
-
-
-province    mean_BMI     sd_BMI   total
----------  ---------  ---------  ------
-AB          26.30560   5.492599   11321
-BC          25.45033   4.969990   15413
-MN          26.86344   5.679759    6962
-NB          27.00482   5.661688    4786
-NL          27.10976   5.426855    3625
-NS          26.78828   5.590665    4629
-ON          26.07027   5.336154   42915
-PEI         26.63559   5.319220    1774
-QC          25.47341   5.030776   23260
-SK          26.83456   5.477853    7161
-TR          26.35759   5.588537    3083
+```
+## # A tibble: 11 x 4
+##    province mean_BMI   sd_BMI total
+##      <fctr>    <dbl>    <dbl> <int>
+##  1       AB 26.30560 5.492599 11321
+##  2       BC 25.45033 4.969990 15413
+##  3       MN 26.86344 5.679759  6962
+##  4       NB 27.00482 5.661688  4786
+##  5       NL 27.10976 5.426855  3625
+##  6       NS 26.78828 5.590665  4629
+##  7       ON 26.07027 5.336154 42915
+##  8      PEI 26.63559 5.319220  1774
+##  9       QC 25.47341 5.030777 23260
+## 10       SK 26.83456 5.477853  7161
+## 11       TR 26.35760 5.588537  3083
+```
 
 ### Subsetting
 
@@ -506,6 +507,13 @@ Image we want to put the Saskatchewan and Newfoundland data together into one da
 library(dplyr)
 
 sask_nl <- bind_rows(sask, newfoundland)
+table(sask_nl$province)
+```
+
+```
+## 
+##   AB   BC   MN   NB   NL   NS   ON  PEI   QC   SK   TR 
+##    0    0    0    0 3625    0    0    0    0 7161    0
 ```
 
 Notes:   
@@ -580,6 +588,20 @@ Inner joins retain only the rows in both datasets. In our case, we expect we kno
 
 ```r
 join_inner_nl <- inner_join(nl_weight1, nl_height1, by="CASEID")
+head(join_inner_nl)
+```
+
+```
+##   CASEID weight height
+## 1    117  77.85  1.702
+## 2    129  67.50  1.651
+## 3    162 108.90  1.626
+## 4    270  81.00  1.626
+## 5    346  90.00  1.803
+## 6    386 103.50  1.727
+```
+
+```r
 nrow(join_inner_nl)
 ```
 
