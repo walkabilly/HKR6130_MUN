@@ -43,7 +43,7 @@ Accelemerometer data in R  | 4    |
 Intervention evaluation 1 | 5    |
 Mobile apps | 6 |
 Geography concepts   | 7    | 
-Getting started with GPS  | 9    | 
+Getting started with GPS  | 8    | 
 GPS data in R  | 9    | 
 Intervention evaluation 2  | 10   | 
 All the data  | 11    | 
@@ -98,7 +98,7 @@ There are no specific formatting rules or guidelines for the course related to r
     iii) Data availability: Can the user access their own data? In what formats? 
     iiii) Privacy policy: Does the developer sell the data to third parties? 
     iiiii) Usage: Is it feasible to use the app for your research project? What are the advantages/disadvantages? 
-2. Chose 2 of the apps and collect 1 day of data using your phone. Present a brief overview of the data using R and RMarkdown. 
+2. Chose 1 of the apps and collect 1 day of data using your phone. Present a brief overview of the data using R and RMarkdown. 
 3. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
 
 #### Study Proposal	(15%)
