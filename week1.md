@@ -34,5 +34,5 @@ This week we will focus on reading a discussing the conceptual and general measu
 ## Tasks
 
 1. Choose a blogging platform or website platform. I recommend using [Blogger](https://www.blogger.com/) or [Wordpress](https://wordpress.com/). 
-2. Write a blog post (max 500 words) describing the main discussion points the 4 readings.
+2. Write a blog post (max 500 words) describing the main discussion points of the 4 readings.
 3. Post the link to the D2L Discussion Forum *Blog post links*.
