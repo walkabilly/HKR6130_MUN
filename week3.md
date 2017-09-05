@@ -20,15 +20,19 @@ During the readings spend some energy thinking about what you would like to do f
 
 ## Readings 
 
-1. Shadish, W R., Cook, T D. The Renaissance of Field Experimentation in Evaluating Interventions. Annual Review of Psychology. Vol. 60:607-629. [http://www.annualreviews.org.qe2a-proxy.mun.ca/doi/10.1146/annurev.psych.60.110707.163544](http://www.annualreviews.org.qe2a-proxy.mun.ca/doi/10.1146/annurev.psych.60.110707.163544). **Available through MUN library**
+1. Shadish, W R., Cook, T D. The Renaissance of Field Experimentation in Evaluating Interventions. Annual Review of Psychology. Vol. 60:607-629. [http://www.annualreviews.org.qe2a-proxy.mun.ca/doi/10.1146/annurev.psych.60.110707.163544](http://www.annualreviews.org.qe2a-proxy.mun.ca/doi/10.1146/annurev.psych.60.110707.163544). **Available through MUN library.**
 
-2. Craig P, Cooper C, Gunnell D, et al. Using natural experiments to evaluate population health interventions: new MRC guidance. Journal of epidemiology and community health. 2012;66(12):1182-1186. [www.dx.doi.org/10.1136/jech-2011-200375](www.dx.doi.org/10.1136/jech-2011-200375)
+2. Craig, P., Katikireddi, S V., Leyland, A., Popham, F. Natural Experiments: An Overview of Methods, Approaches, and Contributions to Public Health Intervention Research. Annual Review of Public Health 2017 38:1, 39-56. [https://doi.org/10.1146/annurev-publhealth-031816-044327](https://doi.org/10.1146/annurev-publhealth-031816-044327)
 
-3. Lillie, E O., Patay, B., Diamant, J., Issell, B., Topol, E J., Schork, J J. The n-of-1 clinical trial: the ultimate strategy for individualizing medicine? Personalized Medicine. 2011 Mar; 8(2): 161–173. [https://dx.doi.org/10.2217%2Fpme.11.7](https://dx.doi.org/10.2217%2Fpme.11.7)
+3. Craig P, Cooper C, Gunnell D, et al. Using natural experiments to evaluate population health interventions: new MRC guidance. Journal of epidemiology and community health. 2012;66(12):1182-1186. [www.dx.doi.org/10.1136/jech-2011-200375](www.dx.doi.org/10.1136/jech-2011-200375)
+
+4. Lillie, E O., Patay, B., Diamant, J., Issell, B., Topol, E J., Schork, J J. The n-of-1 clinical trial: the ultimate strategy for individualizing medicine? Personalized Medicine. 2011 Mar; 8(2): 161–173. [https://dx.doi.org/10.2217%2Fpme.11.7](https://dx.doi.org/10.2217%2Fpme.11.7)
 
 ## Reflection Questions
 
-1. 
+1. What are the key design elements for a quasi or natural experiment to make strong causal claims?  
+2. Why do the key design elements improve causal claims quasi or natural experiment studies? 
+4. What are differences/similarities between **n of 1** studies and quasi or natural experiment studies? 
 
 ## Tasks
 
