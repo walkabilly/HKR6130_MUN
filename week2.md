@@ -4,6 +4,34 @@ August 30, 2017
 
 
 
+## HKR 6130 Week 2
+
+## Introduction
+
+This week we will introduce R. Your objective is to become familiar with the software and learn some programming. This week will be scary. It will take time. You are learning a new language.  
+
+In my experience the biggest hurdle for people is getting setup in R, reading in a file, and getting familiary with Markdown. Read and become familiar with Markdown. Slow and steady. Run small chunks of code at a time. 
+
+## Objectives
+
+1. Reproduce the analysis I've done in this tutorial. 
+2. Learn Markdown. 
+
+## Readings
+
+1. [Getting Started with RMarkdown](http://rmarkdown.rstudio.com/lesson-1.html)
+2. Wickham, H. Tidy Data. Journal of Statistical Software. 2014, 50:10.
+ [http://dx.doi.org/10.18637/jss.v059.i10](http://dx.doi.org/10.18637/jss.v059.i10)
+3. R coding style sheets: 
+    i) [Hadley](http://adv-r.had.co.nz/Style.html) 
+    ii) [Goolge](https://google.github.io/styleguide/Rguide.xml) 
+    
+# Important Notes  
+
+1. I am using the [Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/) philosophy developed by David Robinson. That said, because I've been using R for a while I sometimes fall back on base R or other packages. 
+
+2. There is almost always more than one way to do the same thing in R. The tidyverse will be our main approach because it's consisent and powerful.  
+
 ## Getting Started in R
 
 The [R project for statistical computing](https://www.r-project.org/) is a free open source statistical programming language and project. Follow these steps to get started:
@@ -36,14 +64,6 @@ The main advantages of R are the fact that R is freeware and that there is a lot
 * Weaknesses  
     + slow with very large data sets  
     + non-standard programming paradigms  
-
-# Important Notes  
-
-1. I am using the [Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/) philosophy developed by David Robinson. That said, because I've been using R for a while I sometimes fall back on base R or other packages. 
-
-2. There is almost always more than one way to do the same thing in R. The tidyverse will be our main approach because it's consisent and powerful.  
-
-3. Coding style is important. Follow the [Hadley](http://adv-r.had.co.nz/Style.html) or [Goolge](https://google.github.io/styleguide/Rguide.xml) style guide. Leave comments so your team can pass the "hit by a bus test."
 
 # Let's get started
 
@@ -146,6 +166,13 @@ R can do many statistical and data analyses. They are organized in so-called pac
 
 You can ask for help about a package by typing `?tidyverse` or search the R website by typing `??tidyverse`.
 
+Packages we will need to for this tutorial:  
+1. `tidyverse`
+2. `ggplot2`
+3. `car`
+4. `haven`
+5. `read_excel`
+
 ## Data Frames
 
 Data frames are probably what you are used to working with. This is the typical data format other statistical software, like SPSS and Stata use. In R, are a data frame can be comprised of many different data types (i.e., numeric, string, factor) so long as all variables are the same length. Data frames also typically have labelled headers giving you a short description of the variable. 
@@ -232,18 +259,18 @@ tbl_df(cchs)
 ```
 
 ```
-## # A tibble: 124,929 x 5
+## # A tibble: 124,929 × 5
 ##    CASEID  verdate geogprv hwtghtm hwtgwtk
 ##     <int>    <int>   <int>   <dbl>   <dbl>
-##  1      1 20130913      35   1.575   65.25
-##  2      2 20130913      59   1.905   99.00
-##  3      3 20130913      35   1.803   77.40
-##  4      4 20130913      46   1.727   85.50
-##  5      5 20130913      24   1.803   81.00
-##  6      6 20130913      48   1.727   78.75
-##  7      7 20130913      12   1.626   62.10
-##  8      8 20130913      48   9.999  999.99
-##  9      9 20130913      35   1.905  105.75
+## 1       1 20130913      35   1.575   65.25
+## 2       2 20130913      59   1.905   99.00
+## 3       3 20130913      35   1.803   77.40
+## 4       4 20130913      46   1.727   85.50
+## 5       5 20130913      24   1.803   81.00
+## 6       6 20130913      48   1.727   78.75
+## 7       7 20130913      12   1.626   62.10
+## 8       8 20130913      48   9.999  999.99
+## 9       9 20130913      35   1.905  105.75
 ## 10     10 20130913      59   1.854   85.50
 ## # ... with 124,919 more rows
 ```
@@ -257,7 +284,6 @@ Unlike other stats programs R makes you call the data and variable together. So 
   * `cchs$hwtghtm` - Call the data and variable by name using the $ symbol
   * `cchs %>% hwtghtm` - Call the data, a function using the pipe operator
   * Sometimes packages have a `data = ` to call the data and then you can call the varible name at the correct places. This is common in regression type packages.
-
 
 ## Descriptive Statistics
 
@@ -449,18 +475,18 @@ bmi_prov
 ```
 
 ```
-## # A tibble: 11 x 4
+## # A tibble: 11 × 4
 ##    province mean_BMI   sd_BMI total
 ##      <fctr>    <dbl>    <dbl> <int>
-##  1       AB 26.30560 5.492599 11321
-##  2       BC 25.45033 4.969990 15413
-##  3       MN 26.86344 5.679759  6962
-##  4       NB 27.00482 5.661688  4786
-##  5       NL 27.10976 5.426855  3625
-##  6       NS 26.78828 5.590665  4629
-##  7       ON 26.07027 5.336154 42915
-##  8      PEI 26.63559 5.319220  1774
-##  9       QC 25.47341 5.030777 23260
+## 1        AB 26.30560 5.492599 11321
+## 2        BC 25.45033 4.969990 15413
+## 3        MN 26.86344 5.679759  6962
+## 4        NB 27.00482 5.661688  4786
+## 5        NL 27.10976 5.426855  3625
+## 6        NS 26.78828 5.590665  4629
+## 7        ON 26.07027 5.336154 42915
+## 8       PEI 26.63559 5.319220  1774
+## 9        QC 25.47341 5.030777 23260
 ## 10       SK 26.83456 5.477853  7161
 ## 11       TR 26.35760 5.588537  3083
 ```
@@ -624,3 +650,12 @@ nrow(join_full_nl_2)
 ```
 
 Now if we do the full join we can see we retain all of the data despite there being missing and non complete data in both dataframes we want to merge. 
+
+### Write a file
+
+The last thing we will do is write our newly merge data frame to a csv on our computer. I'm going to write the file to desktop. Make sure you know where your file is going. Also make sure if you are using Windows that you use the correct path structure. 
+
+
+```r
+write.csv(join_full_nl_2, file = "/Users/dfuller/Desktop/join_full_nl_2.csv")
+```
