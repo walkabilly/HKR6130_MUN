@@ -37,8 +37,8 @@ In compliance with the Memorial University’s policy and equal access laws, it 
 Topic   | Week |  
 -----  |------|
 [Physical activity and spatial location measurement](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) | 1    |
-Getting started in R  | 2    | 
-[Intervention design](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md)  | 3    | 
+[Getting started in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md)  | 2    | 
+[Intervention design](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md)  | 3    | 
 Accelemerometer data in R  | 4    |
 Intervention evaluation 1 | 5    |
 Mobile apps | 6 |
