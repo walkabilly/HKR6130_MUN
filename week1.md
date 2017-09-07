@@ -31,7 +31,7 @@ This week we will focus on reading a discussing the conceptual and general measu
 2. What is new/unique about the field of "spatial energetics"?
 3. Do accelemeroters and spatial energetics change our conception of what reliability and validity mean for physical activity measurement?
 
-## Task - Assignment 1
+## Task - Blog 1 - Assignment 1
 
 1. Choose a blogging platform or website platform. I recommend using [Blogger](https://www.blogger.com/) or [Wordpress](https://wordpress.com/). 
 2. Write a blog post (max 500 words) describing the main discussion points of the 4 readings.
