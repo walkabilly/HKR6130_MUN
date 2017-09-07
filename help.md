@@ -12,7 +12,7 @@ If you are completely lost or stuck with your data wrangling or analysis there a
 
 1. Dr. Jenny Bryan's Stat 545 course is available on GitHub [http://stat545.com/topics.html](http://stat545.com/topics.html). Fantastic ressource.
 
-2. RStudio has a number of cheat sheets if you can't quite remember the exact bit of code you need. I have these up all the time. 
+2. RStudio has a number of cheat sheets if you can't quite remember the exact bit of code you need. I have these up all the time.  
     i) [Data Import](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-import-cheatsheet.pdf)
     ii) [Data Transformation](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf)
     iii) [RMarkdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
