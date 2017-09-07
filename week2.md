@@ -14,8 +14,9 @@ In my experience the biggest hurdle for people is getting setup in R, reading in
 
 ## Objectives
 
-1. Reproduce the analysis I've done in this tutorial. 
-2. Learn Markdown. 
+1. Learn R.
+2. Reproduce the analysis I've done in this tutorial. 
+3. Learn Markdown. 
 
 ## Readings
 
@@ -25,8 +26,13 @@ In my experience the biggest hurdle for people is getting setup in R, reading in
 3. R coding style sheets: 
     i) [Hadley](http://adv-r.had.co.nz/Style.html) 
     ii) [Goolge](https://google.github.io/styleguide/Rguide.xml) 
-    
-# Important Notes  
+
+## Task - R Tutotial - Assignment 2  
+1. Follow the RMarkdown tutorial in point 2 of the readings.  
+2. Use the data included in GitHub, `CCHS.csv`, to reproduce the analysis presented below in R.  
+3. Submit your RMarkdown `.Rmd` file and your rendered Markdown PDF to Brightspace. 
+
+## Notes  
 
 1. I am using the [Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/) philosophy developed by David Robinson. That said, because I've been using R for a while I sometimes fall back on base R or other packages. 
 
