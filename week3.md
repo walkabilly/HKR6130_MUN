@@ -34,7 +34,7 @@ During the readings spend some energy thinking about what you would like to do f
 2. Why do the key design elements improve causal claims quasi or natural experiment studies? 
 4. What are differences/similarities between **n of 1** studies and quasi or natural experiment studies? 
 
-## Tasks
+## Task - Blog 2 - Assignment 3
 
 1. Choose a blogging platform or website platform. I recommend using [Blogger](https://www.blogger.com/) or [Wordpress](https://wordpress.com/). 
 2. Write a blog post (max 500 words) describing the main discussion points of the readings.
