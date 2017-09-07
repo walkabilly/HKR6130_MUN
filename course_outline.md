@@ -78,7 +78,7 @@ There are no specific formatting rules or guidelines for the course related to r
 #### R tutorial (10%)
 
 1. Complete the R and RMarkdown tutorial.
-2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+2. Submit your RMarkdown file and rendered PDF document to Brightspace. 
 
 #### Blog 2 (5%)
 
