@@ -330,11 +330,8 @@ glimpse(accel_sec_genea)
 ## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, ...
 ```
 
-
-
-
-
-
-
 5. Use the cut points from Reading 1, recode the vector magnitude variable, and create a new variable called `activity`. 
+
+
+
 6. Create a figure of the physical activity intensity by time using `ggplot2`
