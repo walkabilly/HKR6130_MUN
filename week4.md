@@ -46,11 +46,11 @@ There are 2 short readings then we will jump into analyzing data. For this assig
 3. Append (stack) the four files together.
     i) Hint: Use `dplyr::bind_rows`
     ii) Hint: Make sure you have a variable that indicates where the data are from
-4. Aggregate the data by second and calculate the gravity subtracted vector magnitude, and the standard deviation for each axis (x, y, z,). 
-    i) Hint: The data are at 100Hz (100 per second)
-    ii) Hint: The formula for the gravity subtracted vector magnitude is `sum(x^2, y^2, z^2)-9.81`
-    iii) Hint: Use the `sd` function to calcualte the standard deviation
-    iiii) Hint: Use `dplyr`, `group_by`, and `mutate`  
+4. Aggregate the data by second and calculate the gravity subtracted vector magnitude, and the standard deviation for each axis (x, y, z,).   
+    i) Hint: The data are at 100Hz (100 per second)  
+    ii) Hint: The formula for the gravity subtracted vector magnitude is `sqrt(x^2, y^2, z^2)-1`  
+    iii) Hint: Use the `sd` function to calcualte the standard deviation  
+    iiii) Hint: Use `dplyr`, `group_by`, and `summarise`    
 5. Use the cut points from Reading 1, recode the vector magnitude variable, and create a new variable called `activity`. 
 6. Create a figure of the physical activity intensity by time using `ggplot2`
 
@@ -219,21 +219,147 @@ Now we can append (stack) the data together.
 
 The warning is telling us we are trying to combine character and factors. That's ok. The data was coerced and appended together.
 
-Quick gut check. Our previous dataframes had p1_hip = 511500, p1_wrist = 467700, p2_hip = 525900, p2_wrist = 500400. If we add those together we should get 2005500 = 2005500. 
+
+```r
+head(accel_data)
+```
+
+```
+##                      time x_axis  y_axis  z_axis lux button temp id
+## 1 2017-08-29 09:30:00:500 0.0100 -0.0217 -1.0131 381      0 31.6 P1
+## 2 2017-08-29 09:30:00:510 0.0139 -0.0177 -1.0131 398      0 31.6 P1
+## 3 2017-08-29 09:30:00:520 0.0218 -0.0098 -1.0091 414      0 31.6 P1
+## 4 2017-08-29 09:30:00:530 0.0377 -0.0376 -1.0131 414      0 31.6 P1
+## 5 2017-08-29 09:30:00:540 0.0179 -0.0336 -1.0051 414      0 31.6 P1
+## 6 2017-08-29 09:30:00:550 0.0060 -0.0297 -1.0051 398      0 31.6 P1
+##   wear_loc
+## 1      hip
+## 2      hip
+## 3      hip
+## 4      hip
+## 5      hip
+## 6      hip
+```
+
+Quick gut check. Our previous dataframes had p1_hip = 511500, p1_wrist = 467700, p2_hip = 525900, p2_wrist = 500400. If we add those together we should get 2005500 = 2005500. Excellent.
 
 I did that using inline code in RMarkdown. Looks like this:  
 
+*Quick gut check. Our previous dataframes had p1_hip = 511500, p1_wrist = 467700, p2_hip # = r nrow(p2_hip)`, p2_wrist = 500400. If we add those together we should get  = 2005500.*
+
+#### 4. Aggregate the data by second and calculate the gravity subtracted vector magnitude, and the standard deviation for each axis (x, y, z,). 
+
+Now we need to work a bit with time data. Time data can be scary. Use the package `luridate` to help. The `time` variable is currently a factor. We don't want that. Ok, this part is hard. I'm including the code below. Take a look at the lubridate documentation and make sure you understand what is happening. 
+
+Geneactiv makes a list that is 100milliseconds long then uses that for aggregatation. The problem with that is the aggregation happens at the 0.5 second mark rather than the one second mark. This makes the data challenging to combine with GPS data, which we will be going later. I'm going to show you how to write this two ways. First, a way to replicated the Geneactive data. Second, a way to aggregate by the second.
+
+Geneactiv Method
+
 ```r
-#Quick gut check. Our previous dataframes had p1_hip = `r nrow(p1_hip)`, p1_wrist = `r nrow(p1_wrist)`, p2_hip = #r nrow(p2_hip)`, p2_wrist = `r nrow(p2_wrist)`. If we add those together we should get `r #nrow(p1_hip)+nrow(p1_wrist)+nrow(p2_hip)+nrow(p2_wrist)` = `r nrow(accel_data)`.`
+leng <- nrow(accel_data)/100
+accel_data$milli <- rep(seq(1:leng), each=100)
+```
+
+Proper Method
+
+```r
+library(lubridate)
+library(stringr)
+
+accel_data$time1 <- str_sub(accel_data$time, 1, str_length(accel_data$time)-4)  ## Remove the milliseconds
+accel_data$time2 <- ymd_hms(accel_data$time1)  ## Create a POSIXct formated variable
+accel_data$hour <- hour(accel_data$time2)  ## Create an hour variable
+accel_data$minute <- minute(accel_data$time2)  ## Create a minute variable
+accel_data$second <- second(accel_data$time2)  ## Create a second variable
+```
+
+Here we need to create the vector magnitude variables. You are going to create 2 vector magnitude variables. The `x_axis`, `y_axis`, `z_axis` variables are measured in **g**. So we will create two new variables:    
+* Vector Magnitude: `sqrt(accel_data$x_axis^2+accel_data$y_axis^2+accel_data$z_axis^2)`
+* Gravity subtracted vector magnitude: `sqrt(accel_data$x_axis^2+accel_data$y_axis^2+accel_data$z_axis^2)-1`  
+
+
+
+No we will aggregate and create the new variables at the same time. We will use `dplyr`, `group_by`, and `summarise`, just like we did in week 2, except in week 2 used `mutate` rather than `summarise`. We will need to create the summarized variables. Make sure that you include the `abs()` function in your summary in the gravity substracted vector magnitude variable. 
+
+Geneativ Method
+
+```r
+library(dplyr)
+
+accel_sec_genea <- accel_data %>%
+  group_by(milli) %>%
+  summarise(
+         time = first(time), 
+         id = first(id),
+         wear_loc = first(wear_loc),
+         m_x_axis = mean(x_axis),
+         m_y_axis = mean(y_axis),
+         m_z_axis = mean(z_axis),
+         vec_mag = sum(vec_mag),
+         vec_mag_g = sum(abs(vec_mag_g)),
+         sd_x_axis = sd(x_axis),
+         sd_y_axis = sd(y_axis),
+         sd_z_axis = sd(z_axis) 
+        )
+head(accel_sec_genea)
+```
+
+```
+## # A tibble: 6 x 12
+##   milli                    time    id wear_loc m_x_axis  m_y_axis m_z_axis
+##   <int>                   <chr> <chr>    <chr>    <dbl>     <dbl>    <dbl>
+## 1     1 2017-08-29 09:30:00:500    P1      hip 0.022196 -0.034350 -1.00474
+## 2     2 2017-08-29 09:30:01:500    P1      hip 0.020494 -0.034621 -1.00406
+## 3     3 2017-08-29 09:30:02:500    P1      hip 0.021442 -0.034263 -1.00434
+## 4     4 2017-08-29 09:30:03:500    P1      hip 0.020218 -0.034900 -1.00410
+## 5     5 2017-08-29 09:30:04:500    P1      hip 0.021446 -0.033832 -1.00418
+## 6     6 2017-08-29 09:30:05:500    P1      hip 0.020854 -0.035373 -1.00538
+## # ... with 5 more variables: vec_mag <dbl>, vec_mag_g <dbl>,
+## #   sd_x_axis <dbl>, sd_y_axis <dbl>, sd_z_axis <dbl>
+```
+
+Proper method
+
+```r
+accel_sec <- accel_data %>%
+  group_by(hour, minute, second) %>%
+  summarise(
+         time = first(time), 
+         id = first(id),
+         wear_loc = first(wear_loc),
+         m_x_axis = mean(x_axis),
+         m_y_axis = mean(y_axis),
+         m_z_axis = mean(z_axis),
+         vec_mag = sum(vec_mag),
+         vec_mag_g = sum(abs(vec_mag_g)),
+         sd_x_axis = sd(x_axis),
+         sd_y_axis = sd(y_axis),
+         sd_z_axis = sd(z_axis) 
+        )
+head(accel_sec)
+```
+
+```
+## # A tibble: 6 x 14
+## # Groups:   hour, minute [1]
+##    hour minute second                    time    id wear_loc   m_x_axis
+##   <int>  <int>  <dbl>                   <chr> <chr>    <chr>      <dbl>
+## 1     9     30      0 2017-08-29 09:30:00:500    P1      hip -0.3758140
+## 2     9     30      1 2017-08-29 09:30:01:000    P1      hip -0.3792790
+## 3     9     30      2 2017-08-29 09:30:02:000    P1      hip -0.3205540
+## 4     9     30      3 2017-08-29 09:30:03:000    P1      hip -0.3671072
+## 5     9     30      4 2017-08-29 09:30:04:000    P1      hip -0.3766988
+## 6     9     30      5 2017-08-29 09:30:05:000    P1      hip -0.3857225
+## # ... with 7 more variables: m_y_axis <dbl>, m_z_axis <dbl>,
+## #   vec_mag <dbl>, vec_mag_g <dbl>, sd_x_axis <dbl>, sd_y_axis <dbl>,
+## #   sd_z_axis <dbl>
 ```
 
 
-    i) Hint: Use `dplyr::bind_rows`
-    ii) Hint: Make sure you have a variable that indicates where the data are from
-4. Aggregate the data by second and calculate the gravity subtracted vector magnitude, and the standard deviation for each axis (x, y, z,). 
-    i) Hint: The data are at 100Hz (100 per second)
-    ii) Hint: The formula for the gravity subtracted vector magnitude is `sum(x^2, y^2, z^2)-9.81`
-    iii) Hint: Use the `sd` function to calcualte the standard deviation
-    iiii) Hint: Use `dplyr`, `group_by`, and `mutate`  
+
+
+
+
+
 5. Use the cut points from Reading 1, recode the vector magnitude variable, and create a new variable called `activity`. 
 6. Create a figure of the physical activity intensity by time using `ggplot2`
