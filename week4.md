@@ -283,76 +283,51 @@ No we will aggregate and create the new variables at the same time. We will use 
 
 Geneativ Method
 
+
 ```r
-library(dplyr)
-
-accel_sec_genea <- accel_data %>%
-  group_by(milli) %>%
-  summarise(
-         time = first(time), 
-         id = first(id),
-         wear_loc = first(wear_loc),
-         m_x_axis = mean(x_axis),
-         m_y_axis = mean(y_axis),
-         m_z_axis = mean(z_axis),
-         vec_mag = sum(vec_mag),
-         vec_mag_g = sum(abs(vec_mag_g)),
-         sd_x_axis = sd(x_axis),
-         sd_y_axis = sd(y_axis),
-         sd_z_axis = sd(z_axis) 
-        )
-head(accel_sec_genea)
+glimpse(accel_sec_genea)
 ```
 
 ```
-## # A tibble: 6 x 12
-##   milli                    time    id wear_loc m_x_axis  m_y_axis m_z_axis
-##   <int>                   <chr> <chr>    <chr>    <dbl>     <dbl>    <dbl>
-## 1     1 2017-08-29 09:30:00:500    P1      hip 0.022196 -0.034350 -1.00474
-## 2     2 2017-08-29 09:30:01:500    P1      hip 0.020494 -0.034621 -1.00406
-## 3     3 2017-08-29 09:30:02:500    P1      hip 0.021442 -0.034263 -1.00434
-## 4     4 2017-08-29 09:30:03:500    P1      hip 0.020218 -0.034900 -1.00410
-## 5     5 2017-08-29 09:30:04:500    P1      hip 0.021446 -0.033832 -1.00418
-## 6     6 2017-08-29 09:30:05:500    P1      hip 0.020854 -0.035373 -1.00538
-## # ... with 5 more variables: vec_mag <dbl>, vec_mag_g <dbl>,
-## #   sd_x_axis <dbl>, sd_y_axis <dbl>, sd_z_axis <dbl>
+## Observations: 20,055
+## Variables: 12
+## $ milli     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1...
+## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:500"...
+## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1"...
+## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hi...
+## $ m_x_axis  <dbl> 0.022196, 0.020494, 0.021442, 0.020218, 0.021446, 0....
+## $ m_y_axis  <dbl> -0.034350, -0.034621, -0.034263, -0.034900, -0.03383...
+## $ m_z_axis  <dbl> -1.00474, -1.00406, -1.00434, -1.00410, -1.00418, -1...
+## $ vec_mag   <dbl> 100.5635, 100.4927, 100.5210, 100.4977, 100.5044, 10...
+## $ vec_mag_g <dbl> 0.7686551, 0.7443477, 0.7521750, 0.7466425, 0.855205...
+## $ sd_x_axis <dbl> 0.008121028, 0.007577729, 0.007769432, 0.008493258, ...
+## $ sd_y_axis <dbl> 0.007909239, 0.008273339, 0.007395653, 0.007960661, ...
+## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, ...
 ```
+
 
 Proper method
 
+
 ```r
-accel_sec <- accel_data %>%
-  group_by(hour, minute, second) %>%
-  summarise(
-         time = first(time), 
-         id = first(id),
-         wear_loc = first(wear_loc),
-         m_x_axis = mean(x_axis),
-         m_y_axis = mean(y_axis),
-         m_z_axis = mean(z_axis),
-         vec_mag = sum(vec_mag),
-         vec_mag_g = sum(abs(vec_mag_g)),
-         sd_x_axis = sd(x_axis),
-         sd_y_axis = sd(y_axis),
-         sd_z_axis = sd(z_axis) 
-        )
-head(accel_sec)
+glimpse(accel_sec_genea)
 ```
 
 ```
-## # A tibble: 6 x 14
-## # Groups:   hour, minute [1]
-##    hour minute second                    time    id wear_loc   m_x_axis
-##   <int>  <int>  <dbl>                   <chr> <chr>    <chr>      <dbl>
-## 1     9     30      0 2017-08-29 09:30:00:500    P1      hip -0.3758140
-## 2     9     30      1 2017-08-29 09:30:01:000    P1      hip -0.3792790
-## 3     9     30      2 2017-08-29 09:30:02:000    P1      hip -0.3205540
-## 4     9     30      3 2017-08-29 09:30:03:000    P1      hip -0.3671072
-## 5     9     30      4 2017-08-29 09:30:04:000    P1      hip -0.3766988
-## 6     9     30      5 2017-08-29 09:30:05:000    P1      hip -0.3857225
-## # ... with 7 more variables: m_y_axis <dbl>, m_z_axis <dbl>,
-## #   vec_mag <dbl>, vec_mag_g <dbl>, sd_x_axis <dbl>, sd_y_axis <dbl>,
-## #   sd_z_axis <dbl>
+## Observations: 20,055
+## Variables: 12
+## $ milli     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1...
+## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:500"...
+## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1"...
+## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hi...
+## $ m_x_axis  <dbl> 0.022196, 0.020494, 0.021442, 0.020218, 0.021446, 0....
+## $ m_y_axis  <dbl> -0.034350, -0.034621, -0.034263, -0.034900, -0.03383...
+## $ m_z_axis  <dbl> -1.00474, -1.00406, -1.00434, -1.00410, -1.00418, -1...
+## $ vec_mag   <dbl> 100.5635, 100.4927, 100.5210, 100.4977, 100.5044, 10...
+## $ vec_mag_g <dbl> 0.7686551, 0.7443477, 0.7521750, 0.7466425, 0.855205...
+## $ sd_x_axis <dbl> 0.008121028, 0.007577729, 0.007769432, 0.008493258, ...
+## $ sd_y_axis <dbl> 0.007909239, 0.008273339, 0.007395653, 0.007960661, ...
+## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, ...
 ```
 
 
