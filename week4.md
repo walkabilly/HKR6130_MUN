@@ -253,14 +253,14 @@ Now we need to work a bit with time data. Time data can be scary. Use the packag
 
 Geneactiv makes a list that is 100milliseconds long then uses that for aggregatation. The problem with that is the aggregation happens at the 0.5 second mark rather than the one second mark. This makes the data challenging to combine with GPS data, which we will be going later. I'm going to show you how to write this two ways. First, a way to replicated the Geneactive data. Second, a way to aggregate by the second.
 
-Geneactiv Method
+**Geneactiv Method**  
 
 ```r
 leng <- nrow(accel_data)/100
 accel_data$milli <- rep(seq(1:leng), each=100)
 ```
 
-Proper Method
+**Proper Method**  
 
 ```r
 library(lubridate)
@@ -281,7 +281,9 @@ Here we need to create the vector magnitude variables. You are going to create 2
 
 No we will aggregate and create the new variables at the same time. We will use `dplyr`, `group_by`, and `summarise`, just like we did in week 2, except in week 2 used `mutate` rather than `summarise`. We will need to create the summarized variables. Make sure that you include the `abs()` function in your summary in the gravity substracted vector magnitude variable. 
 
-Geneativ Method
+Note that I'm using `glimpse` instead of `head` because there are too many variables and I want a quick view of them all. 
+
+**Geneactiv Method**  
 
 
 ```r
@@ -305,33 +307,125 @@ glimpse(accel_sec_genea)
 ## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, ...
 ```
 
-
-Proper method
+**Proper Method**  
 
 
 ```r
-glimpse(accel_sec_genea)
+glimpse(accel_sec)
 ```
 
 ```
-## Observations: 20,055
-## Variables: 12
-## $ milli     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1...
-## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:500"...
+## Observations: 5,260
+## Variables: 14
+## $ hour      <int> 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9...
+## $ minute    <int> 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, ...
+## $ second    <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15...
+## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:000"...
 ## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1"...
 ## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hi...
-## $ m_x_axis  <dbl> 0.022196, 0.020494, 0.021442, 0.020218, 0.021446, 0....
-## $ m_y_axis  <dbl> -0.034350, -0.034621, -0.034263, -0.034900, -0.03383...
-## $ m_z_axis  <dbl> -1.00474, -1.00406, -1.00434, -1.00410, -1.00418, -1...
-## $ vec_mag   <dbl> 100.5635, 100.4927, 100.5210, 100.4977, 100.5044, 10...
-## $ vec_mag_g <dbl> 0.7686551, 0.7443477, 0.7521750, 0.7466425, 0.855205...
-## $ sd_x_axis <dbl> 0.008121028, 0.007577729, 0.007769432, 0.008493258, ...
-## $ sd_y_axis <dbl> 0.007909239, 0.008273339, 0.007395653, 0.007960661, ...
-## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, ...
+## $ m_x_axis  <dbl> -0.3758140, -0.3792790, -0.3205540, -0.3671072, -0.3...
+## $ m_y_axis  <dbl> -0.16002550, -0.18829300, -0.16573050, -0.14475675, ...
+## $ m_z_axis  <dbl> -0.7537920, -0.7204538, -0.8116322, -0.7498365, -0.7...
+## $ vec_mag   <dbl> 1.021861, 1.011905, 1.013857, 1.012937, 1.009843, 1....
+## $ vec_mag_g <dbl> 0.04965186, 0.03014240, 0.02975791, 0.03137269, 0.04...
+## $ sd_x_axis <dbl> 0.4196716, 0.4177310, 0.3458318, 0.4014946, 0.419936...
+## $ sd_y_axis <dbl> 0.2825844, 0.2654521, 0.2770485, 0.2950564, 0.289039...
+## $ sd_z_axis <dbl> 0.2536057, 0.2910644, 0.2143279, 0.2537107, 0.286560...
 ```
 
-5. Use the cut points from Reading 1, recode the vector magnitude variable, and create a new variable called `activity`. 
+
+```r
+summary(accel_sec)
+```
+
+```
+##       hour            minute          second          time          
+##  Min.   : 9.000   Min.   : 0.00   Min.   : 0.00   Length:5260       
+##  1st Qu.: 9.000   1st Qu.:21.00   1st Qu.:14.00   Class :character  
+##  Median :10.000   Median :36.00   Median :29.00   Mode  :character  
+##  Mean   : 9.658   Mean   :33.87   Mean   :29.42                     
+##  3rd Qu.:10.000   3rd Qu.:47.00   3rd Qu.:44.00                     
+##  Max.   :10.000   Max.   :59.00   Max.   :59.00                     
+##       id              wear_loc            m_x_axis      
+##  Length:5260        Length:5260        Min.   :-0.6989  
+##  Class :character   Class :character   1st Qu.:-0.3668  
+##  Mode  :character   Mode  :character   Median :-0.2734  
+##                                        Mean   :-0.2535  
+##                                        3rd Qu.:-0.1633  
+##                                        Max.   : 0.3388  
+##     m_y_axis           m_z_axis            vec_mag      
+##  Min.   :-0.76976   Min.   :-0.998147   Min.   :0.9682  
+##  1st Qu.:-0.03757   1st Qu.:-0.792081   1st Qu.:1.0072  
+##  Median : 0.11291   Median :-0.426600   Median :1.0279  
+##  Mean   : 0.16760   Mean   :-0.417944   Mean   :1.1040  
+##  3rd Qu.: 0.36450   3rd Qu.: 0.004501   3rd Qu.:1.1034  
+##  Max.   : 0.74857   Max.   : 0.380420   Max.   :2.1669  
+##    vec_mag_g          sd_x_axis          sd_y_axis      
+##  Min.   :0.006641   Min.   :0.006295   Min.   :0.00599  
+##  1st Qu.:0.015701   1st Qu.:0.357276   1st Qu.:0.17818  
+##  Median :0.081440   Median :0.488478   Median :0.40699  
+##  Mean   :0.191145   Mean   :0.593408   Mean   :0.39369  
+##  3rd Qu.:0.257820   3rd Qu.:0.760300   3rd Qu.:0.55105  
+##  Max.   :1.389333   Max.   :2.046297   Max.   :1.31686  
+##    sd_z_axis       
+##  Min.   :0.007292  
+##  1st Qu.:0.223262  
+##  Median :0.325609  
+##  Mean   :0.369814  
+##  3rd Qu.:0.468324  
+##  Max.   :1.261156
+```
+
+#### 5. Use the cut points from Reading 1, recode the vector magnitude variable, and create a new variable called `activity`. 
+
+The cut points in Table 3 from the paper are as follows: 
+
+| Activity | Cut Point (vec_mag_g) | 
+|----------|-----------|
+| Sedentary | <= 0.19000 |
+| Light | >0.19001 to <0.31400 |
+| Moderate | >=0.314001 to <0.9989 | 
+| Vigorous | >0.999 to max |
+
+We will use the `car::recode` function here. If you want you can try with `dplyr.` We will be using the "accel_sec" data. 
 
 
 
-6. Create a figure of the physical activity intensity by time using `ggplot2`
+
+```
+## 
+## 1.Sedentary     2.Light  3.Moderate  4.Vigorous 
+##        3290        1131         707         132
+```
+
+#### 6. Create a figure of the physical activity (`vec_mag_g`) intensity by time using `ggplot2`
+
+
+```r
+library(ggplot2)
+
+fig1 <- ggplot(accel_sec, aes(x = time, y = vec_mag_g)) + 
+          geom_point(alpha = 1/10) + 
+            xlab("Time") +
+            ylab("Vector Magnitude")
+plot(fig1)
+```
+
+![](week4_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
+
+Now we will create a figure that colours the Vector Magnitude by our activity cut point classification.
+
+![](week4_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
+
+#### 7. Just for fun and only if you want I've coloured the approximate times of our vigorous activity with the time stamps. 
+
+![](week4_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
+
+Awesome. Looks about right. I was probably off by a few seconds in the recording but overall not too bad. 
+
+## You just processed 2 Million accelerometer records! Well done. 
+
+![Programmer](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)  
+
+[Dog](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)  
+
