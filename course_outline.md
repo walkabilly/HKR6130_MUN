@@ -92,14 +92,14 @@ There are no specific formatting rules or guidelines for the course related to r
 
 #### App Review (15%)
 
-1. Conduct a review of 5-10 (minimum 5, maximum 10) apps for collecting physical activity and spatial location data in the Google Play or Apple App Store. The review should include the following: 
-    i) App developer information: Who developed the app? 
-    ii) Cost: How much does the app cost? 
-    iii) Data availability: Can the user access their own data? In what formats? 
-    iiii) Privacy policy: Does the developer sell the data to third parties? 
-    iiiii) Usage: Is it feasible to use the app for your research project? What are the advantages/disadvantages? 
-2. Chose 1 of the apps and collect 1 day of data using your phone. Present a brief overview of the data using R and RMarkdown. 
-3. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+1. Conduct a review of 5-10 (minimum 5, maximum 10) apps for collecting physical activity and spatial location data in the Google Play or Apple App Store. The review should include the following:  
+    i) App developer information: Who developed the app?   
+    ii) Cost: How much does the app cost?   
+    iii) Data availability: Can the user access their own data? In what formats?   
+    iiii) Privacy policy: Does the developer sell the data to third parties?   
+    iiiii) Usage: Is it feasible to use the app for your research project? What are the advantages/disadvantages?   
+2. Chose 1 of the apps and collect 1 day of data using your phone. Present a brief overview of the data using R and RMarkdown.  
+3. Submit your data, Rmd file, and rendered PDF document to Brightspace.  
 
 #### Study Proposal	(15%)
 
