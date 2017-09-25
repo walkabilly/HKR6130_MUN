@@ -1,6 +1,5 @@
 # Week 6
 Daniel Fuller  
-9/20/2017  
 
 
 
