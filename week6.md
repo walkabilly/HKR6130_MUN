@@ -9,6 +9,8 @@ Daniel Fuller
 
 This week we you will be exploring the world of mobile apps and devices for physical activity data collection. Your task this week is to explore the Google and Apple app stores for apps that allow data physical activity data collection. If you have a personal wearable device (Fitbit, Apple Watch, Garmin, Polar, etc) you can also include that device in the review. 
 
+Your *n of 1* study proposal is also due for week 7. I have provided a description of the proposal below.
+
 ## Objectives
 
 1. Explore the word of mobile apps and wearable devices for physical activity data collection.  
@@ -62,3 +64,31 @@ Does the company or app sell your data? What measures are in place to keep your 
     ii) Disadvantages?
 
 ```
+
+## *N of 1* study
+
+### Description
+
+The purpose of the *n of 1* study is to design a research project using yourself as the the participant. You will be required to collect data for 2 weeks. The first week, you will track your behaviour using the app of your choice but you will not change your behaviour. The second week, you will change your behaviour and track those changes using the same app. Your intervention (change in behaviour) will need to be developped based on the academic literature examine what works to change physical activity behaviour. Possible interventions may include: 
+
+    i) Walking or cycling to work every day
+    ii) Meeting a 13,000 steps / day goal
+    iii) Using a standing desk
+
+These are just suggestions. Feel free to explore the world of research in physical activity behaviour change. 
+
+### Sections 
+
+Your *n of 1* study proposal should be one page and include the following information. 
+
+1. A description of previous research that supports your intervention or suggests that your intervention will increase your level of physical activity. This should include support from 5-10 academic publications. The section should be 1/2 page. 
+
+2. Your research question and hypothesis. Describe your research question and hypothesis for the study. You should only have 1 research question and 1 hypothesis. The section should be 1 paragraph.
+
+3. Your methods. What will your outcome (dependent) variable be for the study. How will you analyze the data? How will create figures and tables to examine whether your intervention increased your physical activity? This section should be 2 paragraphs. 
+
+4. The app you will use to collect your data. What app will you be using? What data are available from the app? This section should be 2 paragraphs. 
+
+### Format
+
+The paper should be formatted using a standard academic format. I would suggest that APA and AMA are good choices. You can use MS Word or another word processor for the study proposal. You are not required to use Markdown. References should be included on a separate page. 
