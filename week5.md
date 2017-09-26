@@ -54,19 +54,31 @@ head(boris)
 #### Understand the data
 
 The data represent bike share program use in London. There were two transit system strikes in London during the time period. The data represent these strikes. The data has a number of variables. Some of which I created in steps that I did not show here. Here is a description of the variables:   
-    1. **start_date**: The date [Type = Factor]  
-    3. **t_trip**: The total number of trips that day [Type = Integer]  
-    4. **strike**: A categorical variable indicating strike 0 (pre), 1 (strike 1), 2 (strike 2) [Type = Numeric]  
-    5. **time**: A sequence from 1 to 95 [Type = Integer]  
+1. **start_date**: The date [Type = Factor]  
+3. **t_trip**: The total number of trips that day [Type = Integer]  
+4. **strike**: A categorical variable indicating strike 0 (pre), 1 (strike 1), 2 (strike 2) [Type = Numeric]  
+5. **time**: A sequence from 1 to 95 [Type = Integer]  
 
 #### Visualize the data
 
 Use the variable **t_trip** as the outcome and create a scatterplot of the data over time. We will need `ggplot2` as per usual. 
-![](week5_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
-    
-We know the strikes happened on September 6th and October 4th. Add horizontal lines to the figure to shown when the strikes happened. You can use `geom_vline` to create the lines on the figures. 
+
+
+```r
+plot(boris_f1)  
+```
 
 ![](week5_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
+We know the strikes happened on September 6th and October 4th. Add horizontal lines to the figure to shown when the strikes happened. You can use `geom_vline` to create the lines on the figures. 
+
+![](week5_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
+```r
+plot(boris_f2)  
+```
+
+![](week5_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 Now. Let's use the function `geom_smooth` by group (strike) to get a sense of how the relationship is changing over time. Here will use the default `geom_smooth` which is a *loess* regression. We can also visualize the linear relationship using `"method = "lm"`.
 
@@ -75,7 +87,17 @@ Now. Let's use the function `geom_smooth` by group (strike) to get a sense of ho
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![](week5_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](week5_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+
+```r
+plot(boris_f3)  
+```
+
+```
+## `geom_smooth()` using method = 'loess'
+```
+
+![](week5_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 Here we see that there a big increases in the number of trips of Boris bikeshare bikes in London during the strike but that over time, the usage goes decreases. We can create a table to show use the number of at each strike period using `dplyr::group_by` and `dplyr::summarize`. Calculate the average and standard deviation during each period (strike variable). 
 
