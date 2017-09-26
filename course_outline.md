@@ -41,7 +41,7 @@ Topic   | Week |
 [Intervention design](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md)  | 3    | 
 [Accelemerometer data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week4.md)  | 4    |
 Intervention evaluation 1 | 5    |
-Mobile apps | 6 |
+[Mobile apps](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | 6 |
 Geography concepts   | 7    | 
 Getting started with GPS  | 8    | 
 GPS data in R  | 9    | 
