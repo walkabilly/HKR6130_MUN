@@ -72,7 +72,7 @@ plot(boris_f1)
 
 We know the strikes happened on September 6th and October 4th. Add horizontal lines to the figure to shown when the strikes happened. You can use `geom_vline` to create the lines on the figures. 
 
-![](week5_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
 
 ```r
 plot(boris_f2)  
@@ -83,11 +83,6 @@ plot(boris_f2)
 Now. Let's use the function `geom_smooth` by group (strike) to get a sense of how the relationship is changing over time. Here will use the default `geom_smooth` which is a *loess* regression. We can also visualize the linear relationship using `"method = "lm"`.
 
 
-```
-## `geom_smooth()` using method = 'loess'
-```
-
-![](week5_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 plot(boris_f3)  
