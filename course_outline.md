@@ -40,7 +40,7 @@ Topic   | Week |
 [Getting started in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md)  | 2    | 
 [Intervention design](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md)  | 3    | 
 [Accelemerometer data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week4.md)  | 4    |
-Intervention evaluation 1 | 5    |
+[Intervention evaluation 1](https://github.com/walkabilly/HKR6130_MUN/blob/master/week5.md) | 5    |
 [Mobile apps](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | 6 |
 [Geography concepts](https://github.com/walkabilly/HKR6130_MUN/blob/master/week7.md)   | 7    | 
 Getting started with GPS  | 8    | 
