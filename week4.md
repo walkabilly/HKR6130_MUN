@@ -34,9 +34,9 @@ There are 2 short readings then we will jump into analyzing data. For this assig
 
 ## Readings 
 
-1. Esliger, D., Rowlands, A V., Hurst, T L., Michael, C., MURRAY, P.,  ROGER R G. Validation of the GENEA Accelerometer. Medicine & Science in Sports & Exercise. 2011, 43(6): 1085-1093. [www.dx.doi.org/10.1249/MSS.0b013e31820513be](www.dx.doi.org/10.1249/MSS.0b013e31820513be) **Select LWW Journals.**
+1. Esliger, D., Rowlands, A V., Hurst, T L., Michael, C., MURRAY, P.,  ROGER R G. Validation of the GENEA Accelerometer. Medicine & Science in Sports & Exercise. 2011, 43(6): 1085-1093. [http://www.dx.doi.org/10.1249/MSS.0b013e31820513be](http://www.dx.doi.org/10.1249/MSS.0b013e31820513be) **Select LWW Journals.**
 
-2. Schaeger, C A.,  Nigg, C R., Hill, J O., Brink, L., Browning, R. Establishing and Evaluating Wrist Cutpoints for the GENEActiv Accelerometer in Youth. Medicine & Science in Sports & Exercise. 2014, 46(4): 826–833. [www.dx.doi.org/10.1249/MSS.0000000000000150](www.dx.doi.org/10.1249/MSS.0000000000000150) **Select LWW Journals.**
+2. Schaeger, C A.,  Nigg, C R., Hill, J O., Brink, L., Browning, R. Establishing and Evaluating Wrist Cutpoints for the GENEActiv Accelerometer in Youth. Medicine & Science in Sports & Exercise. 2014, 46(4): 826–833. [http://www.dx.doi.org/10.1249/MSS.0000000000000150](http://www.dx.doi.org/10.1249/MSS.0000000000000150) **Select LWW Journals.**
 
 ## Task - Geneactiv Data - Assignment 5  
 
@@ -376,7 +376,7 @@ summary(accel_sec)
 ##  Max.   :1.261156
 ```
 
-#### 5. Use the cut points from Reading 1, recode the vector magnitude variable, and create a new variable called `activity`. 
+#### 5. Use the cut points from Reading 2, recode the vector magnitude variable, and create a new variable called `activity`. 
 
 The cut points in Table 3 from the paper are as follows: 
 
