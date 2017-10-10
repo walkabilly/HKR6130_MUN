@@ -43,7 +43,7 @@ Topic   | Week |
 [Intervention evaluation 1](https://github.com/walkabilly/HKR6130_MUN/blob/master/week5.md) | 5    |
 [Mobile apps](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | 6 |
 [Geography concepts](https://github.com/walkabilly/HKR6130_MUN/blob/master/week7.md)   | 7    | 
-Getting started with GPS  | 8    | 
+[Getting started with GPS](https://github.com/walkabilly/HKR6130_MUN/blob/master/week8.md) | 8    | 
 GPS data in R  | 9    | 
 Intervention evaluation 2  | 10   | 
 All the data  | 11    | 
