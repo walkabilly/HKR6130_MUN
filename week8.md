@@ -157,7 +157,8 @@ Note that the function ggplot() is replaced with autoplot(), a function that use
 ```r
 library(OpenStreetMap)
 
-base_map <- openmap(c(max(user_ij$latitude), min(user_ij$longitude)), c(min(user_ij$latitude), max(user_ij$longitude)), type = "osm")
+base_map <- openmap(c(max(user_ij$latitude), min(user_ij$longitude)), 
+                    c(min(user_ij$latitude), max(user_ij$longitude)), type = "osm")
 
 ### This part is magic. One of the challenges with creating basemaps in R is that it does not have default method for knowing where to put the map. What we did here was use the maximum and minimum of the longitude and latitude to create the bounds for the base map. We now have a programmed method to created bounds for any basemap. 
 
@@ -175,7 +176,8 @@ autoplot(mapLatLon) +
 #### We can also use the Bing map with an Aerial image map. 
 
 ```r
-base_map_bing <- openmap(c(max(user_ij$latitude), min(user_ij$longitude)), c(min(user_ij$latitude), max(user_ij$longitude)), type = "bing")
+base_map_bing <- openmap(c(max(user_ij$latitude), min(user_ij$longitude)), 
+                         c(min(user_ij$latitude), max(user_ij$longitude)), type = "bing")
 
 mapLatLon_bing <- openproj(base_map_bing)
 
@@ -215,7 +217,8 @@ Note that the following code calculate the distance between the start and end GP
 
 ```r
 library(raster)
-pointDistance(c(user_ij$latitude[1],user_ij$longitude[1]),c(user_ij$latitude[length(user_ij$id)],user_ij$longitude[length(user_ij$id)]),lonlat = T)
+pointDistance(c(user_ij$latitude[1], user_ij$longitude[1]), 
+              c(user_ij$latitude[length(user_ij$id)], user_ij$longitude[length(user_ij$id)]), lonlat = T)
 ```
 
 ```
