@@ -21,10 +21,21 @@ This week we will use R to perform more advanced visualization and analyses of G
 
 ## Getting started
 
+There are multiple data files for this week. You will need to download them all and make sure they are in the same place. You will need to make sure you download all of the **shapefile** `DA_LAYER`. The analysis will not work without all of those files being in the same place. The files are as follows:   
+    1. DA_LAYER.dbf  
+    2. DA_LAYER.prj  
+    3. DA_LAYER.sbn  
+    4. DA_LAYER.shp  
+    5. DA_LAYER.shx  
+    6. Popdense.csv  
+    7. coordinates.csv  
+
 #### 1. Set the working directory and read GPS data from the .csv file. Note that we alphabetically order the GPS records based on participants' unique id.
 
+
+
 ```r
-#setwd("https://github.com/walkabilly/HKR6130_MUN/blob/master/coordinates.csv")
+#setwd("")
 gps <- read.csv("coordinates.csv")
 gps <- gps[order(gps$uuid),]
 ```
