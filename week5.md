@@ -107,14 +107,3 @@ Here we see that there a big increases in the number of trips of Boris bikeshare
 ```
 
 Here we see that the average number of trips before the strike was 10856, after the first stroke the average was 16380, and after the second strike the average was 17476 trips per day. 
-
-### Comparing Means
-
-
-### Comparing Means + Groups 
-
-
-## Reflection Questions
-
-1. 
-
