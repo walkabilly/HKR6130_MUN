@@ -44,7 +44,7 @@ Topic   | Week |
 [Mobile apps](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | 6 |
 [Geography concepts](https://github.com/walkabilly/HKR6130_MUN/blob/master/week7.md)   | 7    | 
 [Getting started with GPS](https://github.com/walkabilly/HKR6130_MUN/blob/master/week8.md) | 8    | 
-GPS data in R  | 9    | 
+[GPS data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week9.md)  | 9    | 
 Intervention evaluation 2  | 10   | 
 All the data  | 11    | 
 Intervention theory  | 12    | 
@@ -103,21 +103,21 @@ There are no specific formatting rules or guidelines for the course related to r
 
 #### Study Proposal	(15%)
 
-1. Write a 2 page study proposal for your *n of 1* study. Describe the following in detail: 
-    i) The intervention you will be subjecting yourself to
-    ii) The app you will be using for data collecting
-    iii) Your data analysis plan
-    iiii) Your contigency plan for the app bonks
+1. Write a 2 page study proposal for your *n of 1* study. Describe the following in detail:   
+    i) The intervention you will be subjecting yourself to  
+    ii) The app you will be using for data collecting  
+    iii) Your data analysis plan  
+    iiii) Your contigency plan for the app bonks  
 
 #### GIS Tutorial	(10%)
 
-1. Complete the GIS tutorial using **XYZ**.
+1. Complete the GIS tutorial using R.
 2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
 
 #### GIS Data	(10%)
 
-1. Complete the GIS data analysis lab using **XYZ**.
-2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+1. Complete the GIS data analysis lab using R.
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace.  
 
 #### Final Article (20%)
 
