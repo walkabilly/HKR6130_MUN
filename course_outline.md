@@ -45,9 +45,6 @@ Topic   | Week |
 [Geography concepts](https://github.com/walkabilly/HKR6130_MUN/blob/master/week7.md)   | 7    | 
 [Getting started with GPS](https://github.com/walkabilly/HKR6130_MUN/blob/master/week8.md) | 8    | 
 [GPS data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week9.md)  | 9    | 
-Intervention evaluation 2  | 10   | 
-All the data  | 11    | 
-Intervention theory  | 12    | 
 
 ### Course Evaluations
 
