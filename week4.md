@@ -203,20 +203,6 @@ Now we can append (stack) the data together.
 ## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
 ```
 
-```
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-```
-
 The warning is telling us we are trying to combine character and factors. That's ok. The data was coerced and appended together.
 
 
