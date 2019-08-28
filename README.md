@@ -80,10 +80,10 @@ In compliance with the Memorial University’s policy and equal access laws, it 
 
 ## [Weekly Outline]: Weekly Outline
 
-Data | Week | Link | 
- ------------------------------------ | ---- | --- |
-9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) |
-
-
+Data | Week | Link | Assignment 
+ ------------------------------------ | ---- | --- | ----
+9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) | Regular Assignment 1 
+16 September 2019 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md) | Intro to R 
+23 September 2019 | 2 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md) | Regular Assignment 2 
 
 Thanks to [Jenny Bryan](https://twitter.com/jennybryan) for the inspiration and tutorials. 
