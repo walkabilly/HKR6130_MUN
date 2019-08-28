@@ -1,6 +1,11 @@
-# Week1
-Daniel Fuller  
-August 29, 2017  
+---
+title: "Week1"
+author: "Daniel Fuller"
+date: "August 29, 2017"
+output:
+      html_document:
+        keep_md: true
+---
 
 
 
@@ -12,27 +17,24 @@ This week we will focus on reading a discussing the conceptual and general measu
 
 ## Objectives
 
-1. Think physical activity and spatical location measurement. 
-2. Write a short reflection blog post. 
+1. Introduce yourself.
+2. Think physical activity. 
+3. Write a short reflection blog post. 
 
 ## Readings 
 
 1. Strath, SJ., Kaminsky, LA., Ainsworth, BE., Ekelund, U., Freedson, PS., Gary, RA., Richardson, CR., Smith, DT., Swartz, AM., on behalf of the American Heart Association Physical Activity Committee of the Council on Lifestyle and Cardiometabolic Health and Cardiovascular, Exercise, Cardiac Rehabilitation and Prevention Committee of the Council on Clinical Cardiology, and Council on Cardiovascular and Stroke Nursing. Circulation. Guide to the Assessment of Physical Activity: Clinical and Research Applications . 2013;128:2259-2279. [https://doi.org/10.1161/01.cir.0000435708.67487.da](https://doi.org/10.1161/01.cir.0000435708.67487.da)
 
-2. James, P., Jankowska, M., Marx, C., Hart, J. E., Berrigan, D., Kerr, J., Hurvitz, P. M.,  Hipp, A.,  Laden, F. “Spatial Energetics”: : Integrating Data From GPS, Accelerometry, and GIS to Address Obesity and Inactivity, American Journal of Preventive Medicine, 51(5), 2016, 792-800.  [http://dx.doi.org/10.1016/j.amepre.2016.06.006](http://dx.doi.org/10.1016/j.amepre.2016.06.006)
-
-3. Kelly, P., Fitzsimons, C., Baker. G. Should we reframe how we think about physical activity and sedentary behaviour measurement? Validity and reliability reconsidered. International Journal of Behavioral Nutrition and Physical Activity, 2016, 13:32. [https://doi.org/10.1186/s12966-016-0351-4](https://doi.org/10.1186/s12966-016-0351-4)
-
-4. Terwee, CB., L. B. Mokkink, L. M. Hidding, T. M. Altenburg, M. N. van Poppel and M. J. M. Chinapaw. Comment on “Should we reframe how we think about physical activity and sedentary behavior measurement? Validity and reliability reconsidered”. International Journal of Behavioral Nutrition and Physical Activity, 2016, 13:66. [https://doi.org/10.1186/s12966-016-0392-8](https://doi.org/10.1186/s12966-016-0392-8)
+2. Kelly, P., Fitzsimons, C., Baker. G. Should we reframe how we think about physical activity and sedentary behaviour measurement? Validity and reliability reconsidered. International Journal of Behavioral Nutrition and Physical Activity, 2016, 13:32. [https://doi.org/10.1186/s12966-016-0351-4](https://doi.org/10.1186/s12966-016-0351-4)
 
 ## Reflection Questions
 
 1. What are the advantages/challenges of using accelerometers to collect physical activity data?
-2. What is new/unique about the field of "spatial energetics"?
-3. Do accelemeroters and spatial energetics change our conception of what reliability and validity mean for physical activity measurement?
+2. Do accelemeroters change our conception of what reliability and validity mean for physical activity measurement?
+3. How could would you measure physical activity if you had to? In a classroom? In older adults? 
 
-## Task - Blog 1 - Assignment 1
+## Regular Assignment 1
 
-1. Choose a blogging platform or website platform. I recommend using [Blogger](https://www.blogger.com/) or [Wordpress](https://wordpress.com/). 
-2. Write a blog post (max 500 words) describing the main discussion points of the 4 readings.
-3. Post the link to the D2L Discussion Forum *Blog post links*.
+1. Make a 1-2 minute video introducing yourself to the class. Post a link to the Intro Video Forum on BrightSpace. 
+2. Write a blog post (max 500 words) describing the main discussion points of the readings. Use the HuffPo blogging guidelines (https://www.huffpost.com/entry/7-tips-for-writing-that-g_b_10724558) 
+3. Submit the blog to BrightSpace `Blog` Forum - Regular Assignment 1
