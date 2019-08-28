@@ -78,7 +78,7 @@ The School of Human Kinetics and Recreation now has a Committee for Academic Int
 ## Accommodations for students with disabilities
 In compliance with the Memorial University’s policy and equal access laws, it is understood that appropriate academic accommodations may be required for student with disabilities. Please see the guide for full details http://www.mun.ca/policy/site/policy.php?id=239. 
 
-## [Weekly Outline]: Weekly Outline
+## Weekly Outline
 
 Data | Week | Link | Assignment 
  ------------------------------------ | ---- | --- | ----
