@@ -31,26 +31,44 @@ There is no specific text for this course. A list of readings will provided for 
 
 ## Methods of assessment:
 
-1.	Weekly Assignments 			            40%
-2.	Intro to R				                  15%
-3.	Accelerometer Data in R		          15%
-4.	Intervention Proposal			          10%
-5.	Intervention Evaluation in R	      15%
-6.	Intervention Evaluation	Report	    20%
+ Assignment | Percent
+ ------------------------------------ | ---- 
+ Regular Assignments | 40% 
+ Intro to R | 15% 
+ Accelerometer Data in R | 15% 
+ Intervention Proposal | 10% 
+ Intervention Evaluation in R | 15% 
+ Intervention Evaluation	Report | 20% 
 
-### Weekly Assignments									
-Each instructor will use their own format for evaluating the lab component of this course. In general, this portion of the evaluation will consist of a paper or lab write-up. Instructors will provide information about the specific content of this portion of the evaluation at the beginning of their lecture period.
+__Note 1.__ I purposefuly do not have penalties for late assignments in my courses. You will have the most success with this course if you submit the assignments the weeks suggested. There will be a steep learning curve for R. It will hurt. The faster you get over the learning curve, the easier, and more fun, your life will be in this course.  
+
+__Note 2.__ There are no specific formatting rules or guidelines for the course related to references. Use some type of reference formatting, APA and AMA are good choices. You will be using Markdown for most of the work so formatting mostly takes care of itself. 
+
+### Regular Assignments									
+Regular assignments will be outlined in the Weekly Outline table. 
 
 ### Intro to R										
-Complete the Intro to R session. 
+1. Complete the R and RMarkdown tutorial.
+2. Submit your RMarkdown file and rendered PDF document to Brightspace. 
 
 ### Accelerometer Data in R
+1. Complete the Accelerometer data analysis lab using R and RMarkdown.
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
 
 ### Intervention Proposal
+1. Write a 4 page study proposal for your proposed intervention study. Describe the following in detail:   
+    i) The intervention you would like to evaluate
+    ii) The type of outcome data you will use (e.g., step count, moderate-vigorous physical activity)
+    iii) The sample population and how you will recruit students
+    iiii) A hypothesis about the intervention effect 
+2. This project will be completed in groups of 2. I will assign the groups. 
+3. Once you submit your intervention proposal. I will generate a dataset based on your proprosal. The intervention evaluation report will require you to analyze the dataset to determine if your hypothesis is correct. 
 
 ### Intervention Evaluation in R
 
 ### Intervention Evaluation Report
+1. In the same groups as the Intervention Proposal Assignment write a 3000 word report detailing intervention evaluation.
+2. You can include the information from your Intervention Proposal in the report. 
 
 ## Academic Integrity
 A student is expected to adhere to principles, which constitute proper academic conduct. Please refer to the University Calendar 6.12: http://www.mun.ca/regoff/calendar/sectionNo=REGS-0748 Information regarding acceptable writing practices is available through the Writing Centre at http://www.mun.ca/writingcentre/
@@ -60,7 +78,11 @@ The School of Human Kinetics and Recreation now has a Committee for Academic Int
 ## Accommodations for students with disabilities
 In compliance with the Memorial University’s policy and equal access laws, it is understood that appropriate academic accommodations may be required for student with disabilities. Please see the guide for full details http://www.mun.ca/policy/site/policy.php?id=239. 
 
+## [Weekly Outline]: Weekly Outline
 
+Data | Week | Link | 
+ ------------------------------------ | ---- | --- |
+9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) |
 
 
 
