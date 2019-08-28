@@ -1,6 +1,12 @@
-# Week 2
-Daniel Fuller  
-August 30, 2017  
+---
+title: "Week 2"
+author: "Daniel Fuller"
+date: "August 30, 2017"
+output:
+  html_document:
+    keep_md: yes
+  pdf_document: default
+---
 
 
 
@@ -20,7 +26,7 @@ In my experience the biggest hurdle for people is getting setup in R, reading in
 
 ## Readings
 
-1. [Getting Started with RMarkdown](http://rmarkdown.rstudio.com/lesson-1.html)
+1. [Getting Started with RMarkdown](http://rmarkdown.rstudio.com/lesson-1.html). You need to follow each one of the tabs on the left on the page. 
 2. Wickham, H. Tidy Data. Journal of Statistical Software. 2014, 50:10.
  [http://dx.doi.org/10.18637/jss.v059.i10](http://dx.doi.org/10.18637/jss.v059.i10)
 3. R coding style sheets: 
@@ -29,12 +35,12 @@ In my experience the biggest hurdle for people is getting setup in R, reading in
 
 ## Task - R Tutotial - Assignment 2  
 1. Follow the RMarkdown tutorial in point 2 of the readings.  
-2. Use the data included in GitHub, `CCHS.csv`, to reproduce the analysis presented below in R.  
+2. Use the data included in GitHub, `CCHS.csv` [Right click on this link and select save as...](https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/cchs.csv), to reproduce the analysis presented below in R.  
 3. Submit your RMarkdown `.Rmd` file and your rendered Markdown PDF to Brightspace. 
 
 ## Notes  
 
-1. I am using the [Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/) philosophy developed by David Robinson. That said, because I've been using R for a while I sometimes fall back on base R or other packages. 
+1. I am using the [Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/) philosophy developed by David Robinson. 
 
 2. There is almost always more than one way to do the same thing in R. The tidyverse will be our main approach because it's consisent and powerful.  
 
@@ -52,7 +58,7 @@ The [R project for statistical computing](https://www.r-project.org/) is a free 
 You should see something that looks like in the video. 
 
 * If yes, **great**
-* If no, **Post a note to Slack**.
+* If no, **Email me**.
 
 # What is R? 
 
@@ -265,20 +271,20 @@ tbl_df(cchs)
 ```
 
 ```
-## # A tibble: 124,929 × 5
+## # A tibble: 124,929 x 5
 ##    CASEID  verdate geogprv hwtghtm hwtgwtk
 ##     <int>    <int>   <int>   <dbl>   <dbl>
-## 1       1 20130913      35   1.575   65.25
-## 2       2 20130913      59   1.905   99.00
-## 3       3 20130913      35   1.803   77.40
-## 4       4 20130913      46   1.727   85.50
-## 5       5 20130913      24   1.803   81.00
-## 6       6 20130913      48   1.727   78.75
-## 7       7 20130913      12   1.626   62.10
-## 8       8 20130913      48   9.999  999.99
-## 9       9 20130913      35   1.905  105.75
-## 10     10 20130913      59   1.854   85.50
-## # ... with 124,919 more rows
+##  1      1 20130913      35    1.58    65.2
+##  2      2 20130913      59    1.90    99  
+##  3      3 20130913      35    1.80    77.4
+##  4      4 20130913      46    1.73    85.5
+##  5      5 20130913      24    1.80    81  
+##  6      6 20130913      48    1.73    78.8
+##  7      7 20130913      12    1.63    62.1
+##  8      8 20130913      48   10.00  1000. 
+##  9      9 20130913      35    1.90   106. 
+## 10     10 20130913      59    1.85    85.5
+## # … with 124,919 more rows
 ```
 
 We will mostly be working the **Hadley/Rstudio** way to do this. That said, one of the nice/horrific things about R is that there are many many ways to do the same thing.  
@@ -360,7 +366,6 @@ Recoding a values from a continous variable. We use dplyr and the pipe operator.
 
 ```r
 # Recoding the height data
-library(dplyr)
 cchs <- cchs %>%
   mutate(height = ifelse(hwtghtm == 9.996 | hwtghtm == 9.999, NA, hwtghtm))
 ```
@@ -390,7 +395,6 @@ Now we know we are going to need to clean the weight variable and we are going t
 
 
 ```r
-library(dplyr)
 cchs <- cchs %>%
   mutate(weight = ifelse(hwtgwtk == 999.96 | hwtgwtk == 999.99, NA, hwtgwtk),
          bmi = weight/height^2)
@@ -400,29 +404,35 @@ The mutate method works particularly well when you are using numeric variables. 
 
 
 ```r
-library(car)
-
-cchs$bmi_cat <- car::recode(cchs$bmi, 
-                      "lo:18.499='1. Underweight';
-                      18.5:25='2. Normal';
-                      25.00001:30='3. Overweight';
-                      30.00001:hi='4. Obese';", as.factor.result=TRUE)
+cchs <- cchs %>%
+	mutate(bmi_category = case_when(
+		weight < 18.5 ~ "underweight",
+		weight >=30 & weight <999 ~ "obese",
+		weight >=25 & weight <30 ~ "overweight",
+		weight >=18.5 & weight <25 ~ "normal weight",
+		TRUE ~ "other"
+	))
 
 ## Let's also recode geogprv so it makes more sense
 
-cchs$province <- car::recode(cchs$geogprv, 
-                      "10='NL';
-                      11='PEI';
-                      12='NS';
-                      13='NB';
-                      24='QC';
-                      35='ON';
-                      46='MN';
-                      47='SK';
-                      48='AB';
-                      59='BC';
-                      60='TR';
-                      96:99=NA;", as.factor.result=TRUE)
+cchs <- cchs %>%
+	mutate(province = case_when(
+		geogprv == 10 ~ "NFLD & LAB",
+		geogprv == 11 ~ "PEI",
+		geogprv == 12 ~ "NOVA SCOTIA",
+		geogprv == 13 ~ "NEW BRUNSWICK",
+		geogprv == 24 ~ "QUEBEC",
+		geogprv == 35 ~ "ONTARIO",
+		geogprv == 46 ~ "MANITOBA",
+		geogprv == 47 ~ "SASKATCHEWAN",
+		geogprv == 48 ~ "ALBERTA",
+		geogprv == 59 ~ "BRITISH COLUMBIA",
+		geogprv == 60 ~ "YUKON/NWT/NUNA",
+		geogprv == 96 ~ "NOT APPLICABLE",
+		geogprv == 97 ~ "DON'T KNOW",
+		geogprv == 98 ~ "REFUSAL",
+		TRUE ~ "NOT STATED"
+	))
 ```
 
 Let's graph that data again with our cleaned height and weight variables.
@@ -446,7 +456,7 @@ What if we wanted to see how BMI categories were distributed along with height a
 library(ggplot2)
 
 scatter_cat <- ggplot(cchs, aes(x = height, y = weight)) + 
-  geom_point(aes(colour = factor(bmi_cat)), alpha = 1/5) + 
+  geom_point(aes(colour = factor(bmi_category)), alpha = 1/5) + 
   xlab("Height in Meters") +
   ylab("Weight in Kilograms")
 plot(scatter_cat)
@@ -468,9 +478,6 @@ Let's say I want to get the mean and SD of BMI for each province. I can do that 
 
 
 ```r
-library(dplyr)
-library(knitr)
-
 bmi_prov <- cchs %>%
   group_by(province) %>%
     summarise(mean_BMI = mean(bmi, na.rm=TRUE),
@@ -481,20 +488,20 @@ bmi_prov
 ```
 
 ```
-## # A tibble: 11 × 4
-##    province mean_BMI   sd_BMI total
-##      <fctr>    <dbl>    <dbl> <int>
-## 1        AB 26.30560 5.492599 11321
-## 2        BC 25.45033 4.969990 15413
-## 3        MN 26.86344 5.679759  6962
-## 4        NB 27.00482 5.661688  4786
-## 5        NL 27.10976 5.426855  3625
-## 6        NS 26.78828 5.590665  4629
-## 7        ON 26.07027 5.336154 42915
-## 8       PEI 26.63559 5.319220  1774
-## 9        QC 25.47341 5.030777 23260
-## 10       SK 26.83456 5.477853  7161
-## 11       TR 26.35760 5.588537  3083
+## # A tibble: 11 x 4
+##    province         mean_BMI sd_BMI total
+##    <chr>               <dbl>  <dbl> <int>
+##  1 ALBERTA              26.3   5.49 11321
+##  2 BRITISH COLUMBIA     25.5   4.97 15413
+##  3 MANITOBA             26.9   5.68  6962
+##  4 NEW BRUNSWICK        27.0   5.66  4786
+##  5 NFLD & LAB           27.1   5.43  3625
+##  6 NOVA SCOTIA          26.8   5.59  4629
+##  7 ONTARIO              26.1   5.34 42915
+##  8 PEI                  26.6   5.32  1774
+##  9 QUEBEC               25.5   5.03 23260
+## 10 SASKATCHEWAN         26.8   5.48  7161
+## 11 YUKON/NWT/NUNA       26.4   5.59  3083
 ```
 
 ### Subsetting
@@ -503,21 +510,19 @@ Image want to only use the data from Newfoundland. We need a way to select only 
 
 
 ```r
-library(dplyr)
-
 newfoundland <- cchs %>%
-  filter(province == "NL")  
+  filter(province == "NFLD & LAB")  
 
 sask <- cchs %>%
-  filter(province == "SK")   ## Let's do the same thing with Saskatchewan
+  filter(province == "SASKATCHEWAN")   ## Let's do the same thing with Saskatchewan
 
 table(newfoundland$province)
 ```
 
 ```
 ## 
-##   AB   BC   MN   NB   NL   NS   ON  PEI   QC   SK   TR 
-##    0    0    0    0 3625    0    0    0    0    0    0
+## NFLD & LAB 
+##       3625
 ```
 
 ```r
@@ -526,8 +531,8 @@ table(sask$province)
 
 ```
 ## 
-##   AB   BC   MN   NB   NL   NS   ON  PEI   QC   SK   TR 
-##    0    0    0    0    0    0    0    0    0 7161    0
+## SASKATCHEWAN 
+##         7161
 ```
 
 ### Appending (stacking data)
@@ -536,16 +541,14 @@ Image we want to put the Saskatchewan and Newfoundland data together into one da
 
 
 ```r
-library(dplyr)
-
 sask_nl <- bind_rows(sask, newfoundland)
 table(sask_nl$province)
 ```
 
 ```
 ## 
-##   AB   BC   MN   NB   NL   NS   ON  PEI   QC   SK   TR 
-##    0    0    0    0 3625    0    0    0    0 7161    0
+##   NFLD & LAB SASKATCHEWAN 
+##         3625         7161
 ```
 
 Notes:   
@@ -561,8 +564,6 @@ First, let's create the datasets we need using select. We will only focus on the
 
 
 ```r
-library(dplyr)
-
 ### Select the height data 
 nl_height <- newfoundland %>%
   select(CASEID, height)
