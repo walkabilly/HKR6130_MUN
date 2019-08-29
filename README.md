@@ -119,7 +119,6 @@ Data | Week | Link | Assignment
 14 October 2019 | 6 | [Recovery Week](https://www.youtube.com/watch?v=Ftm2uv7-Ybw) | Intervention Proposal 
 =======
 14 October 2019 | 6 | [Intervention Evaluation in R]() | Intervention Proposal Due
->>>>>>> 30fb7f9a7dc77a96e533e787b8586bb716d31403
 21 October 2019 | 7 | [Intervention Evaluation in R]() | 
 28 October 2019 | 8 |  | 
 4 November 2019 | 9 |  | 
