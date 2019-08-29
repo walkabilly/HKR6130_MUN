@@ -1,7 +1,7 @@
 ---
 title: "Week3"
 author: "Daniel Fuller"
-date: '201p-08-28'
+date: '2019-08-28'
 output:
       html_document:
         keep_md: true
@@ -42,5 +42,6 @@ During the readings spend some time thinking and writing about what you would li
 
 ## Regular Assignment 2
 
+1. Schedule a meeting with Dr. Fuller about your Intervention Proposal.
 2. Write a blog post (max 500 words) describing the main discussion points of the readings. Use the HuffPo blogging guidelines (https://www.huffpost.com/entry/7-tips-for-writing-that-g_b_10724558) 
 3. Submit the blog to BrightSpace `Blog` Forum - Regular Assignment 2

@@ -1,18 +1,18 @@
 # Computer Applications for Physical Activity Measurement and Intervention
 
 ## Instructor
-Dr. Daniel Fuller
-E-mail: dfuller@mun.ca
-Office: PE2023
+Dr. Daniel Fuller  
+E-mail: dfuller@mun.ca  
+Office: PE2023  
 
 ## Office Hours
-Time: Fridays from 10:30-11:30am (NL time) 
+Time: Fridays from 10:30-11:30am (NL time)   
 Location: PE2023 or online https://whereby.com/walkabilly
 
 ## Prerequisites
 None
 
-##Course Description
+## Course Description
 This course will introduce students to physical activity measurement using research grade accelerometers and commercial devices including smartphones and smartwatches. We will also discuss concepts of intervention as they relate to physical education. Students will design a small scale intervention and conduct an analyse using R. Students will learn programming in R. 
 
 ## Course Objectives
@@ -71,9 +71,13 @@ Regular assignments will be outlined in the Weekly Outline table.
 2. You can include the information from your Intervention Proposal in the report. 
 
 ## Academic Integrity
-A student is expected to adhere to principles, which constitute proper academic conduct. Please refer to the University Calendar 6.12: http://www.mun.ca/regoff/calendar/sectionNo=REGS-0748 Information regarding acceptable writing practices is available through the Writing Centre at http://www.mun.ca/writingcentre/
+Students and faculty at Memorial University share an important responsibility to maintain the integrity of the teaching and learning relationship.  This relationship is characterized by honesty, fairness and mutual respect for the aim and principles of the pursuit of education. 
  
-The School of Human Kinetics and Recreation now has a Committee for Academic Integrity. If there is an allegation of academic misconduct for evaluative instruments worth between 15-39% the course instructor is required to submit the work as submitted along with a summary of the allegation to the SHKR Committee for consideration and a decision. Any allegations of evaluative instruments worth 40% or more of the final grade or final examinations are automatically sent to the Senate Committee on Undergraduate Studies for consideration.
+Academic misconduct impedes the activities of the university community and is punishable by appropriate disciplinary action. Students are expected to be familiar with Memorial University’s regulations on Academic Misconduct (Section 6.12 of the Academic Calendar) which sets out the kinds of actions that constitute academic misconduct, including plagiarism, copying or allowing one’s own work to copied, use of unauthorized aids in examinations and tests, submitting work prepared in collaboration with another student when such collaboration has not been authorized, and other academic offenses.  The regulations also describe the procedures for dealing with allegations and the unit level as well as the university level, and the sanctions for any finding of academic misconduct, which can range from a written reprimand to a rescindment of the degree.  A lack of familiarity with Memorial’s regulations on academic misconduct does not constitute a defense against its application.   
+ 
+If an instructor alleges that academic misconduct has occurred for evaluative instruments worth between 15-39% the course instructor is required to submit the student’s work along with a summary of the allegation to the SHKR Committee for Academic Integrity for consideration and a decision. Any allegations of misconduct that occur with evaluative instruments worth 40% or more of the final grade or final examinations are automatically sent to the Senate Committee on Undergraduate Studies for consideration.
+ 
+Further information on academic integrity is outlined in the University Calendar 6.12: http://www.mun.ca/regoff/calendar/sectionNo=REGS-0748 Information regarding acceptable writing practices is available through the Writing Centre at http://www.mun.ca/writingcentre/
 
 ## Accommodations for students with disabilities
 In compliance with the Memorial University’s policy and equal access laws, it is understood that appropriate academic accommodations may be required for student with disabilities. Please see the guide for full details http://www.mun.ca/policy/site/policy.php?id=239. 
@@ -84,6 +88,15 @@ Data | Week | Link | Assignment
  ------------------------------------ | ---- | --- | ----
 9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) | Regular Assignment 1 
 16 September 2019 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md) | Intro to R 
-23 September 2019 | 2 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md) | Regular Assignment 2 
+23 September 2019 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md) | Regular Assignment 2 
+30 September 2019 | 4 | [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week4.md) | 
+7 October 2019 | 5 |  | 
+14 October 2019 | 6 |  | 
+21 October 2019 | 7 |  | 
+28 October 2019 | 8 |  | 
+4 November 2019 | 9 |  | 
+11 November 2019 | 10 |  | 
+18 November 2019 | 11 |  | 
+25 November 2019 | 12 |  | 
 
 Thanks to [Jenny Bryan](https://twitter.com/jennybryan) for the inspiration and tutorials. 
