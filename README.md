@@ -115,7 +115,11 @@ Data | Week | Link | Assignment
 23 September 2019 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md) | Regular Assignment 2 
 30 September 2019 | 4 | [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week4.md) | Accelerometer Data in R
 7 October 2019 | 5 | [App and Device Review](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | Regular Assignment 3 
+<<<<<<< HEAD
 14 October 2019 | 6 | [Recovery Week](https://www.youtube.com/watch?v=Ftm2uv7-Ybw) | Intervention Proposal 
+=======
+14 October 2019 | 6 | [Intervention Evaluation in R]() | Intervention Proposal Due
+>>>>>>> 30fb7f9a7dc77a96e533e787b8586bb716d31403
 21 October 2019 | 7 | [Intervention Evaluation in R]() | 
 28 October 2019 | 8 |  | 
 4 November 2019 | 9 |  | 
