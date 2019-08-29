@@ -45,7 +45,14 @@ __Note 1.__ I purposefuly do not have penalties for late assignments in my cours
 __Note 2.__ There are no specific formatting rules or guidelines for the course related to references. Use some type of reference formatting, APA and AMA are good choices. You will be using Markdown for most of the work so formatting mostly takes care of itself. 
 
 ### Regular Assignments									
-Regular assignments will be outlined in the Weekly Outline table. 
+Regular assignments will be outlined in the Weekly Outline table. The list is here: 
+
+Assignment | Week | Description 
+-------- | -------- | -----
+Regular Assignment 1 | Week 1 | Video and blog
+Regular Assignment 2 | Week 3 | Blog and meeting with Dr. Fuller
+Regular Assignment 3 | Week 5 | Device and App Review
+
 
 ### Intro to R										
 1. Complete the R and RMarkdown tutorial.
@@ -56,13 +63,30 @@ Regular assignments will be outlined in the Weekly Outline table.
 2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
 
 ### Intervention Proposal
-1. Write a 4 page study proposal for your proposed intervention study. Describe the following in detail:   
-    i) The intervention you would like to evaluate
-    ii) The type of outcome data you will use (e.g., step count, moderate-vigorous physical activity)
-    iii) The sample population and how you will recruit students
-    iiii) A hypothesis about the intervention effect 
-2. This project will be completed in groups of 2. I will assign the groups. 
-3. Once you submit your intervention proposal. I will generate a dataset based on your proprosal. The intervention evaluation report will require you to analyze the dataset to determine if your hypothesis is correct. 
+
+#### Description
+
+The purpose of the Intervention Proposal is to design a hypothetical research project that you would like to conduct. You will not need to complete the study, however, I will create a dataset that follows your study design and hypothesis. You will be required to analyze the dataset and write a report outlining your findings. Examples of possible interventions may include
+
+    1. A physical activity intervention to increase physical activity in a school
+    2. A new bicycle lane constructed in a urban area
+    3. A office intervention to increase physical activity among employees
+
+These are just suggestions. Feel free to explore the world of research in physical activity behaviour change. 
+
+__This project will be completed in groups of 2. I will assign the groups.__ 
+
+#### Sections 
+
+- Introduction (~ 800 words): A description of previous research that supports your intervention or suggests that your intervention will change physical activity. This should include support from 5-10 academic publications. 
+
+- Research Question and Hypothesis (~ 100 words): Your research question and hypothesis. Describe your research question and hypothesis for the study. You should only have 1 research question and 1 hypothesis. The section should be 1 paragraph.
+
+- Methods (~ 800 words): What is your outcome (dependent) variable? Describe the intervention in detail. What population are you recruiting for this study? How many people will you need? How will you analyze the data? How will create figures and tables to examine whether your intervention increased your physical activity? 
+
+#### Format
+
+The paper should be formatted using a standard academic format. I would suggest that APA and AMA are good choices. You can use MS Word or another word processor for the study proposal. You are not required to use Markdown. References should be included on a separate page. 
 
 ### Intervention Evaluation in R
 
@@ -89,10 +113,10 @@ Data | Week | Link | Assignment
 9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) | Regular Assignment 1 
 16 September 2019 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md) | Intro to R 
 23 September 2019 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md) | Regular Assignment 2 
-30 September 2019 | 4 | [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week4.md) | 
-7 October 2019 | 5 |  | 
-14 October 2019 | 6 |  | 
-21 October 2019 | 7 |  | 
+30 September 2019 | 4 | [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week4.md) | Accelerometer Data in R
+7 October 2019 | 5 | [App and Device Review](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | Regular Assignment 3 
+14 October 2019 | 6 | [Intervention Evaluation in R]() | Intervention Proposal Due
+21 October 2019 | 7 | [Intervention Evaluation in R]() | 
 28 October 2019 | 8 |  | 
 4 November 2019 | 9 |  | 
 11 November 2019 | 10 |  | 
