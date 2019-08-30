@@ -27,6 +27,10 @@ This week we will focus on reading a discussing the conceptual and general measu
 
 2. Kelly, P., Fitzsimons, C., Baker. G. Should we reframe how we think about physical activity and sedentary behaviour measurement? Validity and reliability reconsidered. International Journal of Behavioral Nutrition and Physical Activity, 2016, 13:32. [https://doi.org/10.1186/s12966-016-0351-4](https://doi.org/10.1186/s12966-016-0351-4)
 
+3. Video: [Wearable Devices](https://www.youtube.com/watch?v=SHGqVTf3L6s)
+
+4. Video: [Fitness Trackers vs. Smartphones: Why Wearables Win](https://www.youtube.com/watch?v=64b4lR_JfYY)
+    
 ## Reflection Questions
 
 1. What are the advantages/challenges of using accelerometers to collect physical activity data?
