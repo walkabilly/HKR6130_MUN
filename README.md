@@ -47,22 +47,22 @@ __Note 2.__ There are no specific formatting rules or guidelines for the course 
 ### Regular Assignments									
 Regular assignments will be outlined in the Weekly Outline table. There are 6 regular assignments. Each regular assignent with be worth 6.66% of your mark. The list is here: 
 
-Assignment | Week | Description | 
--------- | -------- | ----- |----
-Regular Assignment 1 | Week 1 | Video and blog | 
-Regular Assignment 2 | Week 3 | Blog and meeting with Dr. Fuller
-Regular Assignment 3 | Week 4 | Apple Watch Data
-Regular Assignment 4 | Week 5 | App and Device Review
-Regular Assignment 5 | Week 7 | Process Evaluation
-Regular Assignment 6 | Week 9 | Outcome Evaluation
+Assignment | Week | Description | Brightspace Location
+-------- | -------- | ----- |---- | -----
+Regular Assignment 1 | Week 1 | Video and blog | __Discussions/Blog/Video and blog__
+Regular Assignment 2 | Week 3 | Intervention? and meeting with Dr. Fuller | __Discussions/Blog/Intervention?__
+Regular Assignment 3 | Week 4 | Apple Watch Data | __Assignments/Apple Watch Data__
+Regular Assignment 4 | Week 5 | App and Device Review | __Assignments/App and Device Review__
+Regular Assignment 5 | Week 7 | Process Evaluation | __Discussions/Blog/Process Evaluation__
+Regular Assignment 6 | Week 9 | Outcome Evaluation | __Discussions/Blog/Outcome Evaluation__
 
 ### Intro to R										
 1. Complete the R and RMarkdown tutorial.
-2. Submit your RMarkdown file and rendered PDF document to Brightspace. 
+2. Submit your RMarkdown file and rendered PDF document to Brightspace (__Assignments/Intro to R__)
 
 ### Accelerometer Data in R
 1. Complete the Accelerometer data analysis lab using R and RMarkdown.
-2. Submit your data, Rmd file, and rendered PDF document to Brightspace. 
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace (__Assignments/Accelerometer Data__)
 
 ### Intervention Proposal
 
@@ -90,13 +90,18 @@ __This project will be completed in groups of 2. I will assign the groups.__
 
 The paper should be formatted using a standard academic format. I would suggest that APA and AMA are good choices. You can use MS Word or another word processor for the study proposal. You are not required to use Markdown. References should be included on a separate page. 
 
+Submit RMarkdown or Word document to Brightspace (__Assignments/Intervention Proposal__)
+
 ### Intervention Evaluation in R
 
-Complete the assignment posted at the end of the [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master) 
+1. Complete the assignment posted at the end of the [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master) 
+2. Submit your data, Rmd file, and rendered PDF document to Brightspace (__Assignments/Intervention Evaluation in R__)
 
 ### Intervention Evaluation Report
 1. In the same groups as the Intervention Proposal Assignment write a 3000 word report detailing intervention evaluation.
 2. You can include the information from your Intervention Proposal in the report. 
+3. Submit RMarkdown or Word document to Brightspace (__Assignments/Intervention Evaluation Report__)
+
 
 ## Academic Integrity
 Students and faculty at Memorial University share an important responsibility to maintain the integrity of the teaching and learning relationship.  This relationship is characterized by honesty, fairness and mutual respect for the aim and principles of the pursuit of education. 
