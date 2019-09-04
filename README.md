@@ -47,9 +47,9 @@ __Note 2.__ There are no specific formatting rules or guidelines for the course 
 ### Regular Assignments									
 Regular assignments will be outlined in the Weekly Outline table. There are 6 regular assignments. Each regular assignent with be worth 6.66% of your mark. The list is here: 
 
-Assignment | Week | Description 
--------- | -------- | -----
-Regular Assignment 1 | Week 1 | Video and blog
+Assignment | Week | Description | 
+-------- | -------- | ----- |----
+Regular Assignment 1 | Week 1 | Video and blog | 
 Regular Assignment 2 | Week 3 | Blog and meeting with Dr. Fuller
 Regular Assignment 3 | Week 4 | Apple Watch Data
 Regular Assignment 4 | Week 5 | App and Device Review
