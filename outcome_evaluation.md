@@ -22,9 +22,9 @@ This week we will focus on reading a discussing process evaluation. According th
 
 ## Readings 
 
-1. National  obesity  observatory. 2012. Standard Evaluation Frameworkfor physical activity interventions. [http://webarchive.nationalarchives.gov.uk/20170110171012/https://www.noo.org.uk/core/frameworks/SEF_PA](http://webarchive.nationalarchives.gov.uk/20170110171012/https://www.noo.org.uk/core/frameworks/SEF_PA)
+1. National  obesity  observatory. 2012. [Standard Evaluation Frameworkfor physical activity interventions](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation_uk.pdf)
 
-2. World Health Organization. Outcome Evaluations. [Outcome Evaluation]("/outcome_evaluation_who.pdf")
+2. World Health Organization. Outcome Evaluations. [Outcome Evaluation]("https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation_who.pdf")
 
 3. Video: [Outcome Evaluation Webinar](https://youtu.be/Sva5JIj5CE4?t=246)
 
