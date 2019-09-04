@@ -122,7 +122,7 @@ Data | Week | Link | Assignment
 28 October 2019 | 8 |  [Intervention Evaluation in R]() | Intervention Proposal 
 4 November 2019 | 9 | [Outcome Evaluation](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation.md)  | Regular Assignment 6 
 11 November 2019 | 10 |  [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/accel_data.md) | Accelerometer Data in R
-18 November 2019 | 11 |  | 
+18 November 2019 | 11 | [Intervention Evaluation Consultation](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_consultation.md) | 
 25 November 2019 | 12 | [Recovery Week](https://www.youtube.com/watch?v=Ux8xAuQBdkk) | Intervention Evaluation Report Due 
 
 Thanks to [Jenny Bryan](https://twitter.com/jennybryan) for the inspiration and tutorials. 
