@@ -13,7 +13,7 @@ output:
 
 ## Introduction
 
-This week we will focus on reading a discussing process evaluation. According the US Centers for Disease Control process evaluation "determines whether program activities have been implemented as intended and resulted in certain outputs. You may conduct process evaluation periodically throughout the life of your program and start by reviewing the activities and output components of the logic model (i.e., the left side)." [https://www.cdc.gov/std/Program/pupestd/Types%20of%20Evaluation.pdf](https://www.cdc.gov/std/Program/pupestd/Types%20of%20Evaluation.pdf)
+This week we will focus on reading a discussing process evaluation. According the US Centers for Disease Control process evaluation "determines whether program activities have been implemented as intended and resulted in certain outputs. You may conduct process evaluation periodically throughout the life of your program." [https://www.cdc.gov/std/Program/pupestd/Types%20of%20Evaluation.pdf](https://www.cdc.gov/std/Program/pupestd/Types%20of%20Evaluation.pdf)
 
 ## Objectives
 
