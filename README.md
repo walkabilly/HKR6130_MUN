@@ -112,9 +112,9 @@ In compliance with the Memorial University’s policy and equal access laws, it 
 
 Data | Week | Link | Assignment 
  ------------------------------------ | ---- | --- | ----
-9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week1.md) | Regular Assignment 1 
-16 September 2019 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/week2.md) | Intro to R 
-23 September 2019 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/week3.md) | Regular Assignment 2 
+9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/physical_activity.md) | Regular Assignment 1 
+16 September 2019 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/r_intro.md) | Intro to R 
+23 September 2019 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention.md) | Regular Assignment 2 
 30 September 2019 | 4 | [Apple Watch Data in R]() | Regular Assignment 3 
 7 October 2019 | 5 | [App and Device Review](https://github.com/walkabilly/HKR6130_MUN/blob/master/week6.md) | Regular Assignment 4 
 14 October 2019 | 6 | [Recovery Week](https://www.youtube.com/watch?v=Ftm2uv7-Ybw) | 
