@@ -45,7 +45,7 @@ __Note 1.__ I purposefuly do not have penalties for late assignments in my cours
 __Note 2.__ There are no specific formatting rules or guidelines for the course related to references. Use some type of reference formatting, APA and AMA are good choices. You will be using Markdown for most of the work so formatting mostly takes care of itself. 
 
 ### Regular Assignments									
-Regular assignments will be outlined in the Weekly Outline table. The list is here: 
+Regular assignments will be outlined in the Weekly Outline table. There are 6 regular assignments. Each regular assignent with be worth 6.66% of your mark. The list is here: 
 
 Assignment | Week | Description 
 -------- | -------- | -----
@@ -91,6 +91,8 @@ __This project will be completed in groups of 2. I will assign the groups.__
 The paper should be formatted using a standard academic format. I would suggest that APA and AMA are good choices. You can use MS Word or another word processor for the study proposal. You are not required to use Markdown. References should be included on a separate page. 
 
 ### Intervention Evaluation in R
+
+Complete the assignment posted at the end of the [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master) 
 
 ### Intervention Evaluation Report
 1. In the same groups as the Intervention Proposal Assignment write a 3000 word report detailing intervention evaluation.
