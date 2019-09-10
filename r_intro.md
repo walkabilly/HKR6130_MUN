@@ -34,7 +34,7 @@ In my experience the biggest hurdle for people is getting setup in R, reading in
     ii) [Goolge](https://google.github.io/styleguide/Rguide.xml) 
 
 ## Task - R Tutotial - Assignment 2  
-1. Follow the RMarkdown tutorial in point 2 of the readings.  
+1. Follow the RMarkdown tutorial in point 1 of the readings.  
 2. Use the data included in GitHub, `CCHS.csv` [Right click on this link and select save as...](https://github.com/walkabilly/HKR6130_MUN/blob/master/data/cchs.csv?raw=true), to reproduce the analysis presented below in R.  
 3. Submit your RMarkdown `.Rmd` file and your rendered Markdown PDF to Brightspace. 
 
