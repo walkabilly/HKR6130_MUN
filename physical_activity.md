@@ -27,7 +27,7 @@ This week we will focus on reading a discussing the conceptual and general measu
 
 2. Kelly, P., Fitzsimons, C., Baker. G. Should we reframe how we think about physical activity and sedentary behaviour measurement? Validity and reliability reconsidered. International Journal of Behavioral Nutrition and Physical Activity, 2016, 13:32. [https://doi.org/10.1186/s12966-016-0351-4](https://doi.org/10.1186/s12966-016-0351-4)
 
-3.Feehan LM, Geldman J, Sayre EC, Park C, Ezzat AM, Yoo JY, Hamilton CB, Li LC. Accuracy of Fitbit Devices: Systematic Review and Narrative Syntheses of Quantitative Data. JMIR Mhealth Uhealth 2018;6(8):e10527 [https://doi.org/10.2196/10527](https://doi.org/10.2196/10527)
+3. Feehan LM, Geldman J, Sayre EC, Park C, Ezzat AM, Yoo JY, Hamilton CB, Li LC. Accuracy of Fitbit Devices: Systematic Review and Narrative Syntheses of Quantitative Data. JMIR Mhealth Uhealth 2018;6(8):e10527 [https://doi.org/10.2196/10527](https://doi.org/10.2196/10527)
 
 4. Video: [Wearable Devices](https://www.youtube.com/watch?v=SHGqVTf3L6s)
 
