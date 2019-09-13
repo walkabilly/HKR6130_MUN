@@ -82,8 +82,24 @@ If it is working you should see some text in your console saying the packages ar
 
 __Question__   
 ```
+I'm trying to knit my .Rmd file to PDF but I'm getting an error that Pandoc is not working or LATEX (pronounced LATEK) is not installed. 
+```
+
+__Answer__
+
+1. Try kniting to .html fist. Does that work?
+
+2. Install MacTex for Mac [https://www.tug.org/mactex/mactex-download.html](https://www.tug.org/mactex/mactex-download.html) or [https://miktex.org/howto/install-miktex](https://miktex.org/howto/install-miktex) for PC. 
+3. Restart RStudio and see if it works. 
+
+-----
+
+__Question__   
+```
 
 ```
+
+----
 
 ## Online Ressources
 
