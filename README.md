@@ -117,6 +117,7 @@ In compliance with the Memorial University’s policy and equal access laws, it 
 
 ## Weekly Outline
 
+
 Data | Week | Link | Assignment 
  ------------------------------------ | ---- | --- | ----
 9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/physical_activity.md) | Regular Assignment 1 
@@ -131,5 +132,10 @@ Data | Week | Link | Assignment
 11 November 2019 | 10 |  [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/accel_data.md) | Accelerometer Data in R
 18 November 2019 | 11 | [Intervention Evaluation Consultation](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_consultation.md) | Meeting with Dr. Fuller
 25 November 2019 | 12 | [Recovery Week](https://www.youtube.com/watch?v=Ux8xAuQBdkk) | Intervention Evaluation Report Due 
+
+## HELP
+
+I will post all of the questions and response I get in the help file here [https://github.com/walkabilly/HKR6130_MUN/blob/master/help.md](https://github.com/walkabilly/HKR6130_MUN/blob/master/help.md). Use this to your advantage, particularly in the first weeks. 
+
 
 Thanks to [Jenny Bryan](https://twitter.com/jennybryan) for the inspiration and tutorials. 
