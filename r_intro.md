@@ -81,11 +81,23 @@ The main advantages of R are the fact that R is freeware and that there is a lot
 
 ## First 
 
-Create a new RMarkdown file. 
+Create a new RMarkdown file.   
 
-![https://www.dropbox.com/s/uvvnd77wsiko8e5/RMardown.gif?dl=0](https://www.dropbox.com/s/uvvnd77wsiko8e5/RMardown.gif?dl=0)
+![https://media.giphy.com/media/MXiCoMt3zSAHDj3ebw/giphy.gif](https://media.giphy.com/media/MXiCoMt3zSAHDj3ebw/giphy.gif)  
+
+Your new RMarkdown file should appear in the top left of the screen. There is an automatic file created that provides an example. You can try and knit that automatically generated file just to make sure everything works. See the example below. 
+
+![https://media.giphy.com/media/Z9bgykuI6R1XdJeTH1/giphy.gif](https://media.giphy.com/media/Z9bgykuI6R1XdJeTH1/giphy.gif)  
 
 
+You can replace the automatically created file with your own work. Knitting the file requires you to save the file. Make sure you know where you saved the file. Here is an example of replacing and editing the file with new content. 
+
+![https://media.giphy.com/media/kZj6JVVZ7pSVieEbC7/giphy.gif](https://media.giphy.com/media/kZj6JVVZ7pSVieEbC7/giphy.gif)  
+
+You should a file you can knit and start inputting your content for the assignment. 
+
+* If yes, **great**
+* If no, **Email me**.
 
 ## Calculator
 
