@@ -79,6 +79,14 @@ The main advantages of R are the fact that R is freeware and that there is a lot
 
 # Let's get started
 
+## First 
+
+Create a new RMarkdown file. 
+
+![https://www.dropbox.com/s/uvvnd77wsiko8e5/RMardown.gif?dl=0](https://www.dropbox.com/s/uvvnd77wsiko8e5/RMardown.gif?dl=0)
+
+
+
 ## Calculator
 
 You can use R as a basic calculator. If you pass the command 2+2 it will return 4. 
