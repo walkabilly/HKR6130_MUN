@@ -205,6 +205,22 @@ Packages we will need to for this tutorial:
 4. `haven`
 5. `read_excel`
 
+## IMPORTANT NOTE
+
+You cannot have `install.packages()` in a code chunk.  If you have something htat looks like this...
+
+```{}
+install.packages()
+```
+
+you will get the following error.
+
+```
+Error in contrib.url(repos, "source") : trying to use CRAN without setting a mirror calls: ... withVisible -> eval -> eval -> install.packages -> contrib.url Execution halted
+```
+
+You only need to `install.packages` once. I recommend doing it in the console. Once you have done that you can use `library()` to load your packges at the top of the RMardown file. 
+
 ## Data Frames
 
 Data frames are probably what you are used to working with. This is the typical data format other statistical software, like SPSS and Stata use. In R, are a data frame can be comprised of many different data types (i.e., numeric, string, factor) so long as all variables are the same length. Data frames also typically have labelled headers giving you a short description of the variable. 
