@@ -96,8 +96,24 @@ __Answer__
 
 __Question__   
 ```
+I got my RMarkdown file set up. And the simple math code worked no problem when I knit it. But when I got down to the install packages I get errors. 
+```
+
+__Answer__
+
+You cannot have `install.packages()` in a code chunk.  If you have something htat looks like this...
+
+```{}
+install.packages()
+```
+
+you will get the following error.
 
 ```
+Error in contrib.url(repos, "source") : trying to use CRAN without setting a mirror calls: ... withVisible -> eval -> eval -> install.packages -> contrib.url Execution halted
+```
+
+You only need to `install.packages` once. I recommend doing it in the console. Once you have done that you can use `library()` to load your packges at the top of the RMardown file. 
 
 ----
 
