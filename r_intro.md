@@ -523,7 +523,7 @@ The mutate method works particularly well when you are using numeric variables. 
 cchs <- cchs %>%
 	mutate(bmi_category = case_when(
 		bmi < 18.5 ~ "underweight",
-		bmi >=30 & bmi <99 ~ "obese",
+		bmi >=30 & bmi <999 ~ "obese",
 		bmi >=25 & bmi <30 ~ "overweight",
 		bmi >=18.5 & bmi <25 ~ "normal weight",
 		TRUE ~ "other"
