@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # Computer Applications for Physical Activity Measurement and Intervention
 
 ## Instructor
