@@ -205,7 +205,9 @@ Packages we will need to for this tutorial:
 4. `haven`
 5. `read_excel`
 
-## IMPORTANT NOTE
+## IMPORTANT NOTES
+
+### Important Note 1 
 
 You cannot have `install.packages()` in a code chunk.  If you have something htat looks like this...
 
@@ -220,6 +222,77 @@ Error in contrib.url(repos, "source") : trying to use CRAN without setting a mir
 ```
 
 You only need to `install.packages` once. I recommend doing it in the console. Once you have done that you can use `library()` to load your packges at the top of the RMardown file. 
+
+## Important Note 2
+
+It's a good idea to put all of the libraries you need in a code chunk at the begining of your RMarkdown file. That will allow you run the code without getting errors indicating the library is not loaded. For this assignment the code chunk would look something like this: 
+
+```{}
+library(tidyverse)
+library(car)
+library(haven)
+library(readxl)
+```
+
+
+```r
+library(tidyverse)
+```
+
+```
+## Registered S3 method overwritten by 'rvest':
+##   method            from
+##   read_xml.response xml2
+```
+
+```
+## ── Attaching packages ───────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
+```
+
+```
+## ✔ ggplot2 3.2.0       ✔ purrr   0.3.2  
+## ✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
+## ✔ tidyr   0.8.3       ✔ stringr 1.4.0  
+## ✔ readr   1.3.1       ✔ forcats 0.4.0
+```
+
+```
+## ── Conflicts ──────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+```
+
+```r
+library(car)
+```
+
+```
+## Loading required package: carData
+```
+
+```
+## 
+## Attaching package: 'car'
+```
+
+```
+## The following object is masked from 'package:dplyr':
+## 
+##     recode
+```
+
+```
+## The following object is masked from 'package:purrr':
+## 
+##     some
+```
+
+```r
+library(haven)
+library(readxl)
+```
+
+You will get a bunch of messages that say the packages have been installed that is normal. 
 
 ## Data Frames
 
@@ -240,27 +313,28 @@ Package | Code  | Action
 ------------- | ------------- | -------------
 haven | read.sav  | SPSS data
 foreign | read.dta | Stata data
-read_excel | readxl | Excel data
+readxl | read_excel | Excel data
 
 You can read many file formats using the `haven` package. 
 
 ### Example of `read.csv`
 
-```r
-cchs <- read.csv("/Users/dfuller/Dropbox/Teaching/MUN/HKR 6130/2017/HKR6130_MUN/data/cchs.csv")
-## Remember to change your file path
-```
+2. [Click here to download the data](https://www.dropbox.com/s/4wbbu4248aamp0x/cchs.csv?dl=0). The file is called `cchs.csv`. 
 
-### Example of `read_sav`
+### Remember to change your file path
+
 
 ```r
-library(haven)
-
-cchs_spss <- read_sav("/Users/dfuller/Dropbox/Teaching/MUN/HKR 6130/2017/HKR6130_MUN/data/cchs.sav")
-## Remember to change your file path
+cchs <- read_csv("/Users/dfuller/Dropbox/Teaching/MUN/HKR 6130/2017/HKR6130_MUN/data/cchs.csv")
 ```
 
 ### Example of `readxl`
+
+2. [Click here to download the data](https://www.dropbox.com/s/k35knz29kavkyw9/cchs.xlsx?dl=0). The file is called `cchs.xlsx`. 
+
+### Remember to change your file path
+
+
 
 ```r
 library(readxl)
@@ -292,13 +366,15 @@ head(cchs)
 ```
 
 ```
+## # A tibble: 6 x 5
 ##   CASEID  verdate geogprv hwtghtm hwtgwtk
-## 1      1 20130913      35   1.575   65.25
-## 2      2 20130913      59   1.905   99.00
-## 3      3 20130913      35   1.803   77.40
-## 4      4 20130913      46   1.727   85.50
-## 5      5 20130913      24   1.803   81.00
-## 6      6 20130913      48   1.727   78.75
+##    <dbl>    <dbl>   <dbl>   <dbl>   <dbl>
+## 1      1 20130913      35    1.58    65.2
+## 2      2 20130913      59    1.90    99  
+## 3      3 20130913      35    1.80    77.4
+## 4      4 20130913      46    1.73    85.5
+## 5      5 20130913      24    1.80    81  
+## 6      6 20130913      48    1.73    78.8
 ```
 
 We can also use `tibble` to get a quick view of the data frame
@@ -311,7 +387,7 @@ tbl_df(cchs)
 ```
 ## # A tibble: 124,929 x 5
 ##    CASEID  verdate geogprv hwtghtm hwtgwtk
-##     <int>    <int>   <int>   <dbl>   <dbl>
+##     <dbl>    <dbl>   <dbl>   <dbl>   <dbl>
 ##  1      1 20130913      35    1.58    65.2
 ##  2      2 20130913      59    1.90    99  
 ##  3      3 20130913      35    1.80    77.4
@@ -416,17 +492,19 @@ head(cchs, n = 10)
 ```
 
 ```
+## # A tibble: 10 x 6
 ##    CASEID  verdate geogprv hwtghtm hwtgwtk height
-## 1       1 20130913      35   1.575   65.25  1.575
-## 2       2 20130913      59   1.905   99.00  1.905
-## 3       3 20130913      35   1.803   77.40  1.803
-## 4       4 20130913      46   1.727   85.50  1.727
-## 5       5 20130913      24   1.803   81.00  1.803
-## 6       6 20130913      48   1.727   78.75  1.727
-## 7       7 20130913      12   1.626   62.10  1.626
-## 8       8 20130913      48   9.999  999.99     NA
-## 9       9 20130913      35   1.905  105.75  1.905
-## 10     10 20130913      59   1.854   85.50  1.854
+##     <dbl>    <dbl>   <dbl>   <dbl>   <dbl>  <dbl>
+##  1      1 20130913      35    1.58    65.2   1.58
+##  2      2 20130913      59    1.90    99     1.90
+##  3      3 20130913      35    1.80    77.4   1.80
+##  4      4 20130913      46    1.73    85.5   1.73
+##  5      5 20130913      24    1.80    81     1.80
+##  6      6 20130913      48    1.73    78.8   1.73
+##  7      7 20130913      12    1.63    62.1   1.63
+##  8      8 20130913      48   10.00  1000.   NA   
+##  9      9 20130913      35    1.90   106.    1.90
+## 10     10 20130913      59    1.85    85.5   1.85
 ```
 
 Now we know we are going to need to clean the weight variable and we are going to want to calculate BMI, BMI category, and give some meaning names to the provinces. We can do that entire process in one chunk of code using the same logic we had before. 
@@ -444,10 +522,10 @@ The mutate method works particularly well when you are using numeric variables. 
 ```r
 cchs <- cchs %>%
 	mutate(bmi_category = case_when(
-		weight < 18.5 ~ "underweight",
-		weight >=30 & weight <999 ~ "obese",
-		weight >=25 & weight <30 ~ "overweight",
-		weight >=18.5 & weight <25 ~ "normal weight",
+		bmi < 18.5 ~ "underweight",
+		bmi >=30 & bmi <99 ~ "obese",
+		bmi >=25 & bmi <30 ~ "overweight",
+		bmi >=18.5 & bmi <25 ~ "normal weight",
 		TRUE ~ "other"
 	))
 
@@ -624,13 +702,15 @@ head(join_full_nl)
 ```
 
 ```
+## # A tibble: 6 x 3
 ##   CASEID weight height
-## 1     23  87.75  1.753
-## 2     70  67.50  1.575
-## 3     71 134.10  1.854
-## 4     91  78.75  1.829
-## 5     99  74.25  1.753
-## 6    117  77.85  1.702
+##    <dbl>  <dbl>  <dbl>
+## 1     23   87.8   1.75
+## 2     70   67.5   1.58
+## 3     71  134.    1.85
+## 4     91   78.8   1.83
+## 5     99   74.2   1.75
+## 6    117   77.8   1.70
 ```
 
 The most important thing with the join is to ensure that you understand what data are coming from where. This example is straightforward. Let's complicate things a little by removing some rows from the height data and making some values of CASEID missing in the weight data. 
@@ -663,13 +743,15 @@ head(join_inner_nl)
 ```
 
 ```
+## # A tibble: 6 x 3
 ##   CASEID weight height
-## 1    117  77.85  1.702
-## 2    129  67.50  1.651
-## 3    162 108.90  1.626
-## 4    270  81.00  1.626
-## 5    346  90.00  1.803
-## 6    386 103.50  1.727
+##    <dbl>  <dbl>  <dbl>
+## 1    117   77.8   1.70
+## 2    129   67.5   1.65
+## 3    162  109.    1.63
+## 4    270   81     1.63
+## 5    346   90     1.80
+## 6    386  104.    1.73
 ```
 
 ```r
