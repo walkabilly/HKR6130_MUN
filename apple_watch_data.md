@@ -26,56 +26,10 @@ There are 2 paths for this assignment. If you felt less comfortable with the `In
 library(tidyverse)
 ```
 
-```
-## Registered S3 methods overwritten by 'ggplot2':
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang
-```
-
-```
-## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
-```
-
-```
-## ✔ ggplot2 3.1.1     ✔ purrr   0.3.2
-## ✔ tibble  2.1.1     ✔ dplyr   0.8.3
-## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
-## ✔ readr   1.3.1     ✔ forcats 0.4.0
-```
-
-```
-## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-```
-
 ## Apple Watch Data
 
 ```r
 aw_data <- read_csv("https://github.com/walkabilly/HKR6130_MUN/raw/master/data/apple_watch_data.csv")
-```
-
-```
-## Warning: Missing column names filled in: 'X1' [1]
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   X1 = col_double(),
-##   p_id = col_character(),
-##   device_name = col_character(),
-##   date_time = col_datetime(format = ""),
-##   heart = col_double(),
-##   calories = col_double(),
-##   steps = col_double(),
-##   distance = col_double()
-## )
-```
-
-```r
 summary(aw_data)
 ```
 
@@ -109,7 +63,7 @@ The data have 8 columns. Here is a list and description:
 - **p_id**: The unique identifier for the person in the data. We only have 1 person so this is just `participant1` 
 - **device_name**: The name of the device. We only have 1 so it's just Apple Watch. 
 - **date_time**: The data and time. These data are at the minute level so you have on measurement every minute. 
-- **heart**: Average heart rate for the minute 
+- **heart**: Average heart rate for the minute. Apple Watch series 2 only collects 1 minute of data every 5 minutes. If the value is not collected it is returned as a zero. Zero heart rate is impossible. 
 - **calories**: Active calories burned that minute. This does not consider resting or basal metalic rate. 
 - **steps**: Count of the number of steps taked during that minute. 
 - **distance**: Estimate of the total distance travelled during that minute. 
@@ -127,3 +81,4 @@ The data have 8 columns. Here is a list and description:
 Complete the tasks for Path_A plus the following 
 
 
+# Solutions for Path_A and Path_B can be found [here](https://github.com/walkabilly/HKR6130_MUN/blob/master/apple_watch_data_solutions.md)
