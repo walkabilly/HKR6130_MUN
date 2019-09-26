@@ -6,4 +6,4 @@ relative_links:
 include: 
   - README.md
   - apple_watch_data.md
-theme: jekyll-theme-minimal
+theme: jekyll-theme-dinky
