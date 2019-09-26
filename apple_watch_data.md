@@ -2,9 +2,15 @@
 title: "Apple Watch Data"
 author: "Daniel Fuller"
 date: "18/09/2019"
-output:
-      html_document:
-        keep_md: true
+output: 
+  html_document:
+    code_folding: hide
+    keep_md: true
+    fig_height: 7
+    fig_width: 12
+    toc: yes
+    toc_float:
+      collapsed: no        
 ---
 
 
@@ -107,4 +113,17 @@ The data have 8 columns. Here is a list and description:
 - **calories**: Active calories burned that minute. This does not consider resting or basal metalic rate. 
 - **steps**: Count of the number of steps taked during that minute. 
 - **distance**: Estimate of the total distance travelled during that minute. 
+
+# Tasks for Path_A
+
+1. At each step of Path_A you will need to produce the result and describe in your own words what you think the function you are using is doing. It is a good idea to refer back to your Intro to R work. You have already done the majority of the tasks in Intro to R. 
+2. Read in the Data. What does the function `read_csv` do? You can learn more about a function using the `?function_name` command in your console. Try `?read_csv` in your console. You should see a new window open in the bottom right of your RStudio window. 
+3. 
+
+# Tasks for Path_B
+
+1. 
+
+Complete the tasks for Path_A plus the following 
+
 
