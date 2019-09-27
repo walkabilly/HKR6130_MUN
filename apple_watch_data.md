@@ -63,11 +63,13 @@ __Subtask:__
   
 #### 2. Replace the Zero's in the heart with _NA_ (missing)
 
+A zero for heart rate is no plausible but zeros for active calories, steps, and distance per minute are plausible so we will keep those in. 
+
 __Hint:__
 
 * There is function called `na_if` in `tidyverse`. You can combine it with the pipe operator to turn all zeros from one column into NA.  
 
-#### 3. Calculate the mean and standard deviation for heart rate, calories, steps, and distance.
+#### 3. Calculate the mean and standard deviation for heart rate & calculate the sum for calories, steps, and distance.
 
 __Subtask:__  
 
@@ -93,6 +95,7 @@ __Hint:__
 __Subtask:__  
 
 * What is the difference between the `geom` for creating scatter plots and the `geom` for creating historgrams. 
+* Intepret the figure. Describe what is hapenning in 3 sentences. 
 
 __Hint:__  
 
