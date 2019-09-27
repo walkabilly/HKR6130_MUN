@@ -4,13 +4,7 @@ author: "Daniel Fuller"
 date: "18/09/2019"
 output: 
   html_document:
-    code_folding: hide
     keep_md: true
-    fig_height: 7
-    fig_width: 12
-    toc: yes
-    toc_float:
-      collapsed: no        
 ---
 
 
@@ -30,31 +24,6 @@ library(tidyverse)
 
 ```r
 aw_data <- read_csv("https://github.com/walkabilly/HKR6130_MUN/raw/master/data/apple_watch_data.csv")
-summary(aw_data)
-```
-
-```
-##        X1           p_id           device_name       
-##  Min.   :   1   Length:6137        Length:6137       
-##  1st Qu.:1535   Class :character   Class :character  
-##  Median :3069   Mode  :character   Mode  :character  
-##  Mean   :3069                                        
-##  3rd Qu.:4603                                        
-##  Max.   :6137                                        
-##    date_time                       heart           calories      
-##  Min.   :2018-07-28 02:30:00   Min.   :  0.00   Min.   :0.00000  
-##  1st Qu.:2018-07-31 00:57:00   1st Qu.:  0.00   1st Qu.:0.00003  
-##  Median :2018-08-01 02:31:00   Median :  0.00   Median :0.14612  
-##  Mean   :2018-07-31 21:55:25   Mean   : 13.57   Mean   :0.45021  
-##  3rd Qu.:2018-08-02 04:05:00   3rd Qu.:  0.00   3rd Qu.:0.45252  
-##  Max.   :2018-08-03 05:39:00   Max.   :124.00   Max.   :6.24054  
-##      steps            distance     
-##  Min.   : 0.0000   Min.   : 0.000  
-##  1st Qu.: 0.0000   1st Qu.: 0.000  
-##  Median : 0.4258   Median : 0.309  
-##  Mean   :10.1795   Mean   : 8.195  
-##  3rd Qu.:13.6088   3rd Qu.:10.422  
-##  Max.   :99.5206   Max.   :86.714
 ```
 
 The data have 8 columns. Here is a list and description: 
@@ -70,13 +39,112 @@ The data have 8 columns. Here is a list and description:
 
 # Tasks for Path_A
 
-1. At each step of Path_A you will need to produce the result and describe in your own words what you think the function you are using is doing. It is a good idea to refer back to your Intro to R work. You have already done the majority of the tasks in Intro to R. 
-2. Read in the Data. What does the function `read_csv` do? You can learn more about a function using the `?function_name` command in your console. Try `?read_csv` in your console. You should see a new window open in the bottom right of your RStudio window. 
-3. 
+#### At each step of Path_A you will need to produce the result and describe in your own words what you think the function you are using is doing. It is a good idea to refer back to your Intro to R work. You have already done the majority of the things you will need to for this assignment in Intro to R. 
+
+__Example__
+
+* What does the function `read_csv` do? 
+* You can learn more about a function using the `?function_name` command in your console. 
+* Try `?read_csv` in your console. You should see a new window open in the bottom right of your RStudio window. 
+
+### Tasks
+
+#### 1. Read in the data
+
+__Hint:__   
+
+* Use `read_csv`  
+
+__Subtask:__  
+
+* What does the function `read_csv` do?  
+* How many days of data do we have?  
+* What would you expect to be reasonable values for heart rate and steps if we average heart rate and summed steps over the 4 day per day?  
+  
+#### 2. Replace the Zero's in the heart with _NA_ (missing)
+
+__Hint:__
+
+* There is function called `na_if` in `tidyverse`. You can combine it with the pipe operator to turn all zeros from one column into NA.  
+
+#### 3. Calculate the mean and standard deviation for heart rate, calories, steps, and distance.
+
+__Subtask:__  
+
+* Do these values make sense? What should we expect if we have someone's average heart rate for around 4days?  
+
+__Hint:__  
+
+* You can use the `mean` function. Be careful and check the function because we not have _NA_ values and if you try and calculate the mean of nothing you get nothing. Check `?mean` if you are not getting what you expect. 
+
+#### 4. Create a histogram of the calories column
+
+__Subtask:__ 
+
+* In your description describe in general how you understand ggplot works. 
+* Describe with the function `ggplot` does and what the `geom` to create the histogram does. 
+
+__Hint:__  
+
+* Use ggplot. 
+
+#### 5. Create a scatter plot of heart rate on the y axis and time on the x axis
+
+__Subtask:__  
+
+* What is the difference between the `geom` for creating scatter plots and the `geom` for creating historgrams. 
+
+__Hint:__  
+
+* Use ggplot. 
+
+#### 6. Create a scatter plot of steps and heart rate on the y axis and time on the x axis on the same figure
+
+__Subtask:__  
+
+* What is the difference between the `geom` for creating scatter plots and the `geom` for creating historgrams. 
+
+__Hint:__  
+
+* Start with your previous plot and see if you can build on by adding another layer.
+* You will need to find a way to change the colour of the points in the scatter plot because the default will have a bunch of black points that won't make sense. 
+
+#### 7. Recode steps into zero, 1-99 per minute and 100+ per minute
+
+__Subtask:__  
+
+* Describe what the functions are doing
+
+__Hint:__  
+
+* Use the function `case_when` combined with `mutate` 
+* Refer to your Intro to R material if you are lost
+
+#### 8. Create a table with the categories of your new categorical steps data
+
+__Subtask:__  
+
+* As a sanity check, see the sum of the values from your table match with the total number of observations in your data
+
+__Hint:__  
+
+* There is function called `table` 
+
+#### 9. Calculate the average heart rate and calories for each of the values of your steps_cat variable
+
+__Subtask:__  
+
+* Describe what the functions are doing in your own words
+* Describe if the results make sense to you
+
+__Hint:__  
+
+* Use `group_by`, the pipe operator, and `summarize` 
+* Don't forget the `na.rm` function
 
 # Tasks for Path_B
 
-1. 
+# Coming soon
 
 Complete the tasks for Path_A plus the following 
 
