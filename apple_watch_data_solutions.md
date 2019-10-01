@@ -306,9 +306,7 @@ The data suggest that participant 1 was more active. They had much higher total 
 
 #### 6.1 Download the folder from here [https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0](https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0). Write a function to read in the 3 files and append them.
 
-__Hint:__  
 
-* You can read about interation here [https://r4ds.had.co.nz/iteration.html](https://r4ds.had.co.nz/iteration.html).
 
 #### 6.2 Compute the mean of heart rate for each participant.
 
