@@ -147,13 +147,16 @@ __Hint:__
 
 # Tasks for Path_B
 
-**1. Complete the tasks for Path_A**
+#### 1. Complete the tasks for Path_A
 
-**2. Load in the new dataframe from participant 2 here ().**
+#### 2. Load in the new dataframe from 2 new participants below.
 
-**3. Append (stack) the data from participant 1 and participant 2**
+* Participant 1 [https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/data/aw_data_p1.csv](https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/data/aw_data_p1.csv)
+* Participant 2 [https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/data/aw_data_p2.csv](https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/data/aw_data_p2.csv)
 
-**4. Compare the mean for heart rate, the sum for calories, steps, and distance between P1 and P2**
+#### 3. Append (stack) the data from participant 1 and participant 2
+
+#### 4. Compare the mean for heart rate, the sum for calories, steps, and distance between P1 and P2
 
 __Subtask:__  
 
@@ -165,13 +168,21 @@ __Hint:__
 * Use `group_by`, the pipe operator, and `summarize` 
 * Don't forget the `na.rm` function
 
-**5. Compare the mean for heart rate, the sum for calories, steps, and distance between P1 and P2**
+### Extra Challenge 
 
-#### [Extra Challenge - Not required] 
+**Only if you are interested**
 
-**6.1 Download the folder from here (). Write a function to read in the 3 files and append them.**
-**6.2 Compute the mean of heart rate for each participant.**
+#### 6.1 Download the folder from here [https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0](https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0). Write a function to read in the 3 files and append them.
 
-You can read about interation here [https://r4ds.had.co.nz/iteration.html](https://r4ds.had.co.nz/iteration.html).
+__Hint:__  
+
+* You can read about interation here [https://r4ds.had.co.nz/iteration.html](https://r4ds.had.co.nz/iteration.html).
+
+#### 6.2 Compute the mean of heart rate for each participant.
+
+__Hint:__  
+
+* Use `group_by`, the pipe operator, and `summarize` 
+* Don't forget the `na.rm` function
 
 # Solutions for Path_A and Path_B can be found [here](https://github.com/walkabilly/HKR6130_MUN/blob/master/apple_watch_data_solutions.md)

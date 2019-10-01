@@ -227,4 +227,94 @@ These results make sense. We would expect that heart rate would be higher as ste
 
 Using this `group_by` function is something you will do reguarly. For evaluating and intervention you can group by before and after or different time point for example. Or maybe you want to compare different classes so you could group by class. It is also possible to group by two variables. For example, you could `group_by` class and before/after.  
 
+# Path_B
+
+#### 2. Load in the new dataframe from 2 new participants below.
+
+
+```r
+p1_data <- read_csv("https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/data/aw_data_p1.csv")
+```
+
+```
+## Parsed with column specification:
+## cols(
+##   Username = col_character(),
+##   DeviceName = col_character(),
+##   DateTime = col_datetime(format = ""),
+##   Heart = col_double(),
+##   Steps = col_double(),
+##   Calories = col_double(),
+##   Distance = col_double()
+## )
+```
+
+```r
+p2_data <- read_csv("https://raw.githubusercontent.com/walkabilly/HKR6130_MUN/master/data/aw_data_p2.csv")
+```
+
+```
+## Parsed with column specification:
+## cols(
+##   Username = col_character(),
+##   DeviceName = col_character(),
+##   DateTime = col_datetime(format = ""),
+##   Heart = col_double(),
+##   Steps = col_double(),
+##   Calories = col_double(),
+##   Distance = col_double()
+## )
+```
+
+#### 3. Append (stack) the data from participant 1 and participant 2
+
+
+```r
+merged_data <- bind_rows(p1_data, p2_data)
+```
+
+We had 2062 observations for p1 and 1017 observations for p2 so we should now have 3079 rows. We should also retain all of the columns in the data. 
+
+#### 4. Compare the mean for heart rate, the sum for calories, steps, and distance between P1 and P2
+
+
+```r
+summary_table <- merged_data %>%
+                  group_by(Username) %>% 
+                    summarize(
+                      heart_mean = mean(Heart, na.rm = TRUE),
+                      calories_summ = sum(Calories, na.rm = TRUE),
+                      steps_summ = sum(Steps, na.rm = TRUE), 
+                      distance_sum = sum(Distance, na.rm = TRUE)
+                    )
+summary_table
+```
+
+```
+## # A tibble: 2 x 5
+##   Username     heart_mean calories_summ steps_summ distance_sum
+##   <chr>             <dbl>         <dbl>      <dbl>        <dbl>
+## 1 participant1       15.0         1470.     35961.       28676.
+## 2 participant2       16.2          742.     24354.       18138.
+```
+
+The data suggest that participant 1 was more active. They had much higher total calories, steps, and distance. This is probably explained by the fact that p1 had 1045 more data points than p2. 
+
+### Extra Challenge 
+
+**Only if you are interested**
+
+#### 6.1 Download the folder from here [https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0](https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0). Write a function to read in the 3 files and append them.
+
+__Hint:__  
+
+* You can read about interation here [https://r4ds.had.co.nz/iteration.html](https://r4ds.had.co.nz/iteration.html).
+
+#### 6.2 Compute the mean of heart rate for each participant.
+
+__Hint:__  
+
+* Use `group_by`, the pipe operator, and `summarize` 
+* Don't forget the `na.rm` function
+
 
