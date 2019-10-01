@@ -147,9 +147,31 @@ __Hint:__
 
 # Tasks for Path_B
 
-# Coming soon
+**1. Complete the tasks for Path_A**
 
-Complete the tasks for Path_A plus the following 
+**2. Load in the new dataframe from participant 2 here ().**
 
+**3. Append (stack) the data from participant 1 and participant 2**
+
+**4. Compare the mean for heart rate, the sum for calories, steps, and distance between P1 and P2**
+
+__Subtask:__  
+
+* Which participant has greater values? 
+* Write a short paragraph about about which participant was more active over their respective data collections? 
+
+__Hint:__  
+
+* Use `group_by`, the pipe operator, and `summarize` 
+* Don't forget the `na.rm` function
+
+**5. Compare the mean for heart rate, the sum for calories, steps, and distance between P1 and P2**
+
+#### [Extra Challenge - Not required] 
+
+**6.1 Download the folder from here (). Write a function to read in the 3 files and append them.**
+**6.2 Compute the mean of heart rate for each participant.**
+
+You can read about interation here [https://r4ds.had.co.nz/iteration.html](https://r4ds.had.co.nz/iteration.html).
 
 # Solutions for Path_A and Path_B can be found [here](https://github.com/walkabilly/HKR6130_MUN/blob/master/apple_watch_data_solutions.md)
