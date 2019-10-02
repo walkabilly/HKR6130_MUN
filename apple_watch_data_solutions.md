@@ -307,8 +307,129 @@ The data suggest that participant 1 was more active. They had much higher total 
 #### 6.1 Download the folder from here [https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0](https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0). Write a function to read in the 3 files and append them.
 
 
+```r
+## Create an empty data frame
+aw_data_final <- data_frame()
+```
+
+```
+## Warning: `data_frame()` is deprecated, use `tibble()`.
+## This warning is displayed once per session.
+```
+
+```r
+## Temporarily set the working directory
+setwd("/Users/dfuller/Desktop/aw_data_folder/")
+
+dir(pattern = "*.csv") %>%   ## Create a list of the files in the folder based on the pattern of *.csv
+    purrr::map(function(i){   ## Use map to create a function the reads the files and binds the rows from each file
+      df <- read.csv(i, header = TRUE) 
+      aw_data_final <<- bind_rows(aw_data_final, df)
+    })
+```
+
+```
+## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
+```
+
+```
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+```
+
+```
+## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
+```
+
+```
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+```
+
+```
+## [[1]]
+## # A tibble: 2,062 x 7
+##    Username    DeviceName    DateTime         Heart Steps Calories Distance
+##    <fct>       <fct>         <fct>            <int> <dbl>    <dbl>    <dbl>
+##  1 participan… Apple Watch 2 2017-11-10T20:0…    60  16.8    0.925     14.4
+##  2 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.369     56.9
+##  3 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.313     56.9
+##  4 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.431     56.9
+##  5 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.943     56.9
+##  6 participan… Apple Watch 2 2017-11-10T20:1…   120  67.1    3.10      56.9
+##  7 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    3.97      56.9
+##  8 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.05      56.9
+##  9 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.08      56.9
+## 10 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    5.26      56.9
+## # … with 2,052 more rows
+## 
+## [[2]]
+## # A tibble: 3,079 x 7
+##    Username    DeviceName    DateTime         Heart Steps Calories Distance
+##    <chr>       <fct>         <chr>            <dbl> <dbl>    <dbl>    <dbl>
+##  1 participan… Apple Watch 2 2017-11-10T20:0…    60  16.8    0.925     14.4
+##  2 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.369     56.9
+##  3 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.313     56.9
+##  4 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.431     56.9
+##  5 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.943     56.9
+##  6 participan… Apple Watch 2 2017-11-10T20:1…   120  67.1    3.10      56.9
+##  7 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    3.97      56.9
+##  8 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.05      56.9
+##  9 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.08      56.9
+## 10 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    5.26      56.9
+## # … with 3,069 more rows
+## 
+## [[3]]
+## # A tibble: 4,460 x 7
+##    Username    DeviceName    DateTime         Heart Steps Calories Distance
+##    <chr>       <fct>         <chr>            <dbl> <dbl>    <dbl>    <dbl>
+##  1 participan… Apple Watch 2 2017-11-10T20:0…    60  16.8    0.925     14.4
+##  2 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.369     56.9
+##  3 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.313     56.9
+##  4 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.431     56.9
+##  5 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.943     56.9
+##  6 participan… Apple Watch 2 2017-11-10T20:1…   120  67.1    3.10      56.9
+##  7 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    3.97      56.9
+##  8 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.05      56.9
+##  9 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.08      56.9
+## 10 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    5.26      56.9
+## # … with 4,450 more rows
+```
 
 #### 6.2 Compute the mean of heart rate for each participant.
+
+```r
+summary_table <- aw_data_final %>%
+                  group_by(Username) %>% 
+                    summarize(
+                      heart_mean = mean(Heart, na.rm = TRUE),
+                      calories_summ = sum(Calories, na.rm = TRUE),
+                      steps_summ = sum(Steps, na.rm = TRUE), 
+                      distance_sum = sum(Distance, na.rm = TRUE)
+                    )
+summary_table
+```
+
+```
+## # A tibble: 3 x 5
+##   Username     heart_mean calories_summ steps_summ distance_sum
+##   <chr>             <dbl>         <dbl>      <dbl>        <dbl>
+## 1 participant1       15.0         1470.     35961.       28676.
+## 2 participant2       16.2          742.     24354.       18138.
+## 3 participant3       22.4          751.     24106.       17562.
+```
 
 __Hint:__  
 
