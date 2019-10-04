@@ -25,8 +25,24 @@ aw_data <- read_csv("https://github.com/walkabilly/HKR6130_MUN/raw/master/data/a
 Now that you have the data in your environment. Let's think about the data for a bit. A few questions: 
 
 * What does the function `read_csv` do?  
-* How many days of data do we have?  `6137`
-* What would you expect to be reasonable values for heart rate and steps if we average heart rate and summed steps over the 4 day per day?  `4.3`
+* How many minutes of data do we have?  `6137`
+* What would you expect to be reasonable values for heart rate and steps if we average heart rate and summed steps over the number of days?  
+
+
+```r
+library(lubridate)
+aw_data$date_time <- as_date(aw_data$date_time)
+aw_data$ymd <- ymd(aw_data$date_time)
+table(aw_data$ymd)
+```
+
+```
+## 
+## 2018-07-28 2018-07-30 2018-07-31 2018-08-01 2018-08-02 2018-08-03 
+##        628        849       1440       1440       1440        340
+```
+
+A few possible asnwers here. We have 6137 minutes of data so we could just divide that by 60 and 24 to get 4.3 days. Or we could use the package `lubridate` to convert the time data to a day/month/year format and show a table of the dates, like I did above. If we do that we have 6 days with 3 days of complete data for each minute (24*60 = 1440) and 3 days with less than complete data. 
 
 ## 2. Replace the Zero's in the heart with _NA_ (missing)
 
@@ -106,7 +122,7 @@ histo_calories <- ggplot(aw_data) +
 plot(histo_calories)
 ```
 
-![](apple_watch_data_solutions_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](apple_watch_data_solutions_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ## 5. Create a scatter plot of heart rate on the y axis and time on the x axis
 
@@ -122,7 +138,7 @@ scatter_heart <- ggplot(aw_data) +
 plot(scatter_heart)
 ```
 
-![](apple_watch_data_solutions_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](apple_watch_data_solutions_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 ## 6. Create a scatter plot of steps and heart rate on the y axis and time on the x axis on the same figure
 
@@ -139,7 +155,7 @@ scatter_heart_steps <- ggplot(aw_data) +
 plot(scatter_heart_steps)
 ```
 
-![](apple_watch_data_solutions_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](apple_watch_data_solutions_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ## 7. Recode steps into zero, 1-99 per minute and 100+ per minute
 
@@ -306,10 +322,18 @@ The data suggest that participant 1 was more active. They had much higher total 
 
 #### 6.1 Download the folder from here [https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0](https://www.dropbox.com/s/h8oyf1ypvhd4gfe/aw_data_folder.zip?dl=0). Write a function to read in the 3 files and append them.
 
-```{}
+
+```r
 ## Create an empty data frame
 aw_data_final <- data_frame()
+```
 
+```
+## Warning: `data_frame()` is deprecated, use `tibble()`.
+## This warning is displayed once per session.
+```
+
+```r
 ## Temporarily set the working directory
 setwd("/Users/dfuller/Desktop/aw_data_folder/")
 
@@ -320,8 +344,89 @@ dir(pattern = "*.csv") %>%   ## Create a list of the files in the folder based o
     })
 ```
 
+```
+## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
+```
+
+```
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+```
+
+```
+## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
+```
+
+```
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+```
+
+```
+## [[1]]
+## # A tibble: 2,062 x 7
+##    Username    DeviceName    DateTime         Heart Steps Calories Distance
+##    <fct>       <fct>         <fct>            <int> <dbl>    <dbl>    <dbl>
+##  1 participan… Apple Watch 2 2017-11-10T20:0…    60  16.8    0.925     14.4
+##  2 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.369     56.9
+##  3 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.313     56.9
+##  4 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.431     56.9
+##  5 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.943     56.9
+##  6 participan… Apple Watch 2 2017-11-10T20:1…   120  67.1    3.10      56.9
+##  7 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    3.97      56.9
+##  8 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.05      56.9
+##  9 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.08      56.9
+## 10 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    5.26      56.9
+## # … with 2,052 more rows
+## 
+## [[2]]
+## # A tibble: 3,079 x 7
+##    Username    DeviceName    DateTime         Heart Steps Calories Distance
+##    <chr>       <fct>         <chr>            <dbl> <dbl>    <dbl>    <dbl>
+##  1 participan… Apple Watch 2 2017-11-10T20:0…    60  16.8    0.925     14.4
+##  2 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.369     56.9
+##  3 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.313     56.9
+##  4 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.431     56.9
+##  5 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.943     56.9
+##  6 participan… Apple Watch 2 2017-11-10T20:1…   120  67.1    3.10      56.9
+##  7 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    3.97      56.9
+##  8 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.05      56.9
+##  9 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.08      56.9
+## 10 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    5.26      56.9
+## # … with 3,069 more rows
+## 
+## [[3]]
+## # A tibble: 4,460 x 7
+##    Username    DeviceName    DateTime         Heart Steps Calories Distance
+##    <chr>       <fct>         <chr>            <dbl> <dbl>    <dbl>    <dbl>
+##  1 participan… Apple Watch 2 2017-11-10T20:0…    60  16.8    0.925     14.4
+##  2 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.369     56.9
+##  3 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.313     56.9
+##  4 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.431     56.9
+##  5 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    0.943     56.9
+##  6 participan… Apple Watch 2 2017-11-10T20:1…   120  67.1    3.10      56.9
+##  7 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    3.97      56.9
+##  8 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.05      56.9
+##  9 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    4.08      56.9
+## 10 participan… Apple Watch 2 2017-11-10T20:1…     0  67.1    5.26      56.9
+## # … with 4,450 more rows
+```
+
 #### 6.2 Compute the mean of heart rate for each participant.
-```{, warning = FALSE, message = TRUE}
+
+```r
 summary_table <- aw_data_final %>%
                   group_by(Username) %>% 
                     summarize(
@@ -333,11 +438,18 @@ summary_table <- aw_data_final %>%
 summary_table
 ```
 
+```
+## # A tibble: 3 x 5
+##   Username     heart_mean calories_summ steps_summ distance_sum
+##   <chr>             <dbl>         <dbl>      <dbl>        <dbl>
+## 1 participant1       15.0         1470.     35961.       28676.
+## 2 participant2       16.2          742.     24354.       18138.
+## 3 participant3       22.4          751.     24106.       17562.
+```
+
 __Hint:__  
 
 * Use `group_by`, the pipe operator, and `summarize` 
 * Don't forget the `na.rm` function
-
-## Hello
 
 
