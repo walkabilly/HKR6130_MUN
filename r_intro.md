@@ -240,24 +240,26 @@ library(tidyverse)
 ```
 
 ```
-## Registered S3 method overwritten by 'rvest':
-##   method            from
-##   read_xml.response xml2
+## Registered S3 methods overwritten by 'ggplot2':
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang
 ```
 
 ```
-## ── Attaching packages ───────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
+## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
 ```
 
 ```
-## ✔ ggplot2 3.2.0       ✔ purrr   0.3.2  
-## ✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
-## ✔ tidyr   0.8.3       ✔ stringr 1.4.0  
-## ✔ readr   1.3.1       ✔ forcats 0.4.0
+## ✔ ggplot2 3.1.1     ✔ purrr   0.3.2
+## ✔ tibble  2.1.1     ✔ dplyr   0.8.3
+## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0
 ```
 
 ```
-## ── Conflicts ──────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ```
@@ -305,41 +307,36 @@ As our example we will be using the Canadian Community Health Survey (CCHS) 2011
 ## Set a working directory
 
 **Mac**    `setwd("/Users/dfuller/Desktop/")`   
-**PC**     `setwd("C:\\Users\\Andrie\\R\\win-library\\")` 
+**PC**     `setwd("C:\\Users\\dfuller\\Desktop\\")` 
    
 You can import pretty much any type of data into R with the `foreign` package. It allows you to import and work with data without owning the software. Once you do that you can also write the data to .csv or another reasonable data format. Some examples: 
 
 Package | Code  | Action
 ------------- | ------------- | -------------
-haven | read.sav  | SPSS data
-foreign | read.dta | Stata data
+haven | read_sav  | SPSS data
+foreign | read_dta | Stata data
 readxl | read_excel | Excel data
 
 You can read many file formats using the `haven` package. 
 
-### Example of `read.csv`
+### Example of `read_csv`
 
-2. [Click here to download the data](https://www.dropbox.com/s/4wbbu4248aamp0x/cchs.csv?dl=0). The file is called `cchs.csv`. 
-
-### Remember to change your file path
+Here we are reading the data directly from online. 
 
 
 ```r
-cchs <- read_csv("/Users/dfuller/Dropbox/Teaching/MUN/HKR 6130/2017/HKR6130_MUN/data/cchs.csv")
+cchs <- read_csv("https://github.com/walkabilly/HKR6130_MUN/blob/master/data/cchs.csv?raw=true")
 ```
 
-### Example of `readxl`
+You could also do this by downloading a .csv file and specifying the file path. 
 
-2. [Click here to download the data](https://www.dropbox.com/s/k35knz29kavkyw9/cchs.xlsx?dl=0). The file is called `cchs.xlsx`. 
+[Click here to download the data](https://www.dropbox.com/s/4wbbu4248aamp0x/cchs.csv?dl=0). The file is called `cchs.csv`. 
 
-### Remember to change your file path
-
+__Remember to change your file path.__
 
 
 ```r
-library(readxl)
-
-cchs_xl <- read_excel("//Users/dfuller/Dropbox/Teaching/MUN/HKR 6130/2017/HKR6130_MUN/data/cchs.xlsx", col_types = c("numeric", "text", "text", "numeric", "numeric"))
+cchs <- read_csv("/Users/dfuller/Desktop/cchs.csv")
 ```
 
 Can also write data to many different formats SPSS, Stata, SAS, csv...
