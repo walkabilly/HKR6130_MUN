@@ -13,13 +13,13 @@ output:
 
 ## Introduction
 
-This week we will focus on how to use figures and basic statistics for evaluating whether we think an intervention was succesfull. There are many statistical approaches for intervention evaluation that we will not be covering. This is really more of a gut check than an true evaluation. This course will be a test run given this is the first time this course is being run. I'm happy to include more of the statistical approaches, but also understand that this course is already challenging because we are simultaneously learning code and intervention concepts. Feedback welcome. 
+This week we will focus on how to use figures and basic statistics for evaluating whether we think an intervention was succesful. There are many statistical approaches for intervention evaluation that we will not be covering. This is really more of a gut check than a true evaluation. This course will be a test run given this is the first time this course is being run. I'm happy to include more of the statistical approaches, but also understand that this course is already challenging because we are simultaneously learning code and intervention concepts. Feedback welcome. 
 
 If you are interested in statistical approaches for evaluating natural experiments I recommend you check out some tutorials in R avaialble here [http://walkabilly.ca/home/presentations/workshops/](http://walkabilly.ca/home/presentations/workshops/). Select the **DiD and Int Time Series** tab. These tutorials reproduce published analyses using **Difference in Differences** and **Interrupted Time Series** methods. 
 
 ## Objectives
 
-1. Use figures and basic statistics to examine whether an intervention was successfull. 
+1. Use figures and basic statistics to examine whether an intervention was successful. 
 2. Learn about types of figures and apply them to our data. 
 
 ## Readings 
@@ -60,9 +60,9 @@ head(boris)
 
 The data represent bike share program use in London. There were two transit system strikes in London during the time period. The data represent these strikes. The data has a number of variables. Some of which I created in steps that I did not show here. Here is a description of the variables:   
 1. **start_date**: The date [Type = Factor]  
-3. **t_trip**: The total number of trips that day [Type = Integer]  
-4. **strike**: A categorical variable indicating strike 0 (pre), 1 (strike 1), 2 (strike 2) [Type = Numeric]  
-5. **time**: A sequence from 1 to 95 [Type = Integer]  
+2. **t_trip**: The total number of trips that day [Type = Integer]  
+3. **strike**: A categorical variable indicating strike 0 (pre), 1 (strike 1), 2 (strike 2) [Type = Numeric]  
+4. **time**: A sequence from 1 to 95 [Type = Integer]  
 
 #### Visualize the data
 
@@ -118,4 +118,4 @@ Here we see that there a big increases in the number of trips of Boris bikeshare
 ## 3      2 17476.   4333.
 ```
 
-Here we see that the average number of trips before the strike was 10856, after the first stroke the average was 16380, and after the second strike the average was 17476 trips per day. 
+Here we see that the average number of trips before the strike was 10856, after the first strike the average was 16380, and after the second strike the average was 17476 trips per day. 
