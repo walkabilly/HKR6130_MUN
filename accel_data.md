@@ -291,6 +291,7 @@ Note that I'm using `glimpse` instead of `head` because there are too many varia
 **Geneactiv Method**  
 
 
+
 ```r
 glimpse(accel_sec_genea)
 ```
@@ -315,28 +316,29 @@ glimpse(accel_sec_genea)
 **Proper Method**  
 
 
+
 ```r
 glimpse(accel_sec)
 ```
 
 ```
-## Observations: 5,260
+## Observations: 20,059
 ## Variables: 14
-## Groups: hour, minute [88]
+## Groups: id, wear_loc, hour, minute [336]
+## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", …
+## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip"…
 ## $ hour      <int> 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, …
 ## $ minute    <int> 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30…
 ## $ second    <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, …
 ## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:000", …
-## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", …
-## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip"…
-## $ m_x_axis  <dbl> -0.3758140, -0.3792790, -0.3205540, -0.3671072, -0.376…
-## $ m_y_axis  <dbl> -0.16002550, -0.18829300, -0.16573050, -0.14475675, -0…
-## $ m_z_axis  <dbl> -0.7537920, -0.7204538, -0.8116322, -0.7498365, -0.722…
-## $ vec_mag   <dbl> 1.021861, 1.011905, 1.013857, 1.012937, 1.009843, 1.02…
-## $ vec_mag_g <dbl> 0.04965186, 0.03014240, 0.02975791, 0.03137269, 0.0417…
-## $ sd_x_axis <dbl> 0.4196716, 0.4177310, 0.3458318, 0.4014946, 0.4199366,…
-## $ sd_y_axis <dbl> 0.2825844, 0.2654521, 0.2770485, 0.2950564, 0.2890393,…
-## $ sd_z_axis <dbl> 0.2536057, 0.2910644, 0.2143279, 0.2537107, 0.2865601,…
+## $ m_x_axis  <dbl> 0.022946, 0.020813, 0.021126, 0.021446, 0.020292, 0.02…
+## $ m_y_axis  <dbl> -0.033392, -0.035144, -0.033906, -0.035097, -0.034545,…
+## $ m_z_axis  <dbl> -1.00534, -1.00374, -1.00470, -1.00434, -1.00434, -1.0…
+## $ vec_mag   <dbl> 1.006224, 1.004632, 1.005551, 1.005244, 1.005205, 1.00…
+## $ vec_mag_g <dbl> 0.008264282, 0.007040167, 0.007869534, 0.007576557, 0.…
+## $ sd_x_axis <dbl> 0.007838581, 0.008230734, 0.007622039, 0.007844749, 0.…
+## $ sd_y_axis <dbl> 0.008912885, 0.007604163, 0.007654124, 0.008075120, 0.…
+## $ sd_z_axis <dbl> 0.007768487, 0.007128716, 0.007531751, 0.007621236, 0.…
 ```
 
 
@@ -345,41 +347,34 @@ summary(accel_sec)
 ```
 
 ```
-##       hour            minute          second          time          
-##  Min.   : 9.000   Min.   : 0.00   Min.   : 0.00   Length:5260       
-##  1st Qu.: 9.000   1st Qu.:21.00   1st Qu.:14.00   Class :character  
-##  Median :10.000   Median :36.00   Median :29.00   Mode  :character  
-##  Mean   : 9.658   Mean   :33.87   Mean   :29.42                     
-##  3rd Qu.:10.000   3rd Qu.:47.00   3rd Qu.:44.00                     
-##  Max.   :10.000   Max.   :59.00   Max.   :59.00                     
-##       id              wear_loc            m_x_axis      
-##  Length:5260        Length:5260        Min.   :-0.6989  
-##  Class :character   Class :character   1st Qu.:-0.3668  
-##  Mode  :character   Mode  :character   Median :-0.2734  
-##                                        Mean   :-0.2535  
-##                                        3rd Qu.:-0.1633  
-##                                        Max.   : 0.3388  
-##     m_y_axis           m_z_axis            vec_mag      
-##  Min.   :-0.76976   Min.   :-0.998147   Min.   :0.9682  
-##  1st Qu.:-0.03757   1st Qu.:-0.792081   1st Qu.:1.0072  
-##  Median : 0.11291   Median :-0.426600   Median :1.0279  
-##  Mean   : 0.16760   Mean   :-0.417944   Mean   :1.1040  
-##  3rd Qu.: 0.36450   3rd Qu.: 0.004501   3rd Qu.:1.1034  
-##  Max.   : 0.74857   Max.   : 0.380420   Max.   :2.1669  
-##    vec_mag_g          sd_x_axis          sd_y_axis      
-##  Min.   :0.006641   Min.   :0.006295   Min.   :0.00599  
-##  1st Qu.:0.015701   1st Qu.:0.357276   1st Qu.:0.17818  
-##  Median :0.081440   Median :0.488478   Median :0.40699  
-##  Mean   :0.191145   Mean   :0.593408   Mean   :0.39369  
-##  3rd Qu.:0.257820   3rd Qu.:0.760300   3rd Qu.:0.55105  
-##  Max.   :1.389333   Max.   :2.046297   Max.   :1.31686  
-##    sd_z_axis       
-##  Min.   :0.007292  
-##  1st Qu.:0.223262  
-##  Median :0.325609  
-##  Mean   :0.369814  
-##  3rd Qu.:0.468324  
-##  Max.   :1.261156
+##       id              wear_loc              hour            minute    
+##  Length:20059       Length:20059       Min.   : 9.000   Min.   : 0.0  
+##  Class :character   Class :character   1st Qu.: 9.000   1st Qu.:20.0  
+##  Mode  :character   Mode  :character   Median :10.000   Median :35.0  
+##                                        Mean   : 9.641   Mean   :32.9  
+##                                        3rd Qu.:10.000   3rd Qu.:46.0  
+##                                        Max.   :10.000   Max.   :59.0  
+##      second          time              m_x_axis           m_y_axis        
+##  Min.   : 0.00   Length:20059       Min.   :-1.42253   Min.   :-1.015853  
+##  1st Qu.:14.00   Class :character   1st Qu.:-0.79999   1st Qu.:-0.046400  
+##  Median :29.00   Mode  :character   Median :-0.29377   Median : 0.008874  
+##  Mean   :29.44                      Mean   :-0.26634   Mean   : 0.180734  
+##  3rd Qu.:44.00                      3rd Qu.: 0.01962   3rd Qu.: 0.392452  
+##  Max.   :59.00                      Max.   : 1.13246   Max.   : 1.507083  
+##     m_z_axis           vec_mag         vec_mag_g          sd_x_axis       
+##  Min.   :-1.06611   Min.   :0.7671   Min.   :0.005100   Min.   :0.003315  
+##  1st Qu.:-0.99265   1st Qu.:1.0055   1st Qu.:0.009222   1st Qu.:0.007880  
+##  Median :-0.33960   Median :1.0171   Median :0.073481   Median :0.101758  
+##  Mean   :-0.39050   Mean   :1.1090   Mean   :0.199987   Mean   :0.243840  
+##  3rd Qu.:-0.04864   3rd Qu.:1.1017   3rd Qu.:0.278038   3rd Qu.:0.303751  
+##  Max.   : 1.49243   Max.   :2.8017   Max.   :1.845207   Max.   :2.157539  
+##    sd_y_axis          sd_z_axis       
+##  Min.   :0.003479   Min.   :0.005634  
+##  1st Qu.:0.007260   1st Qu.:0.008966  
+##  Median :0.084678   Median :0.100044  
+##  Mean   :0.185981   Mean   :0.163476  
+##  3rd Qu.:0.249812   3rd Qu.:0.212789  
+##  Max.   :1.855834   Max.   :1.968616
 ```
 
 #### 5. Use the cut points from Reading 2, recode the vector magnitude variable, and create a new variable called `activity`. 
@@ -401,15 +396,13 @@ We will use the `car::recode` function here. If you want you can try with `dplyr
 ```
 ## 
 ## 1.Sedentary     2.Light  3.Moderate  4.Vigorous 
-##        3290        1131         707         132
+##       11944        4145        3520         450
 ```
 
 #### 6. Create a figure of the physical activity (`vec_mag_g`) intensity by time using `ggplot2`
 
 
 ```r
-library(ggplot2)
-
 fig1 <- ggplot(accel_sec, aes(x = time, y = vec_mag_g)) + 
           geom_point(alpha = 1/10) + 
             xlab("Time") +
