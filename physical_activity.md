@@ -27,7 +27,8 @@ This week we will focus on reading a discussing the conceptual and general measu
 
 2. Kelly, P., Fitzsimons, C., Baker. G. Should we reframe how we think about physical activity and sedentary behaviour measurement? Validity and reliability reconsidered. International Journal of Behavioral Nutrition and Physical Activity, 2016, 13:32. [https://doi.org/10.1186/s12966-016-0351-4](https://doi.org/10.1186/s12966-016-0351-4)
 
-3. Feehan LM, Geldman J, Sayre EC, Park C, Ezzat AM, Yoo JY, Hamilton CB, Li LC. Accuracy of Fitbit Devices: Systematic Review and Narrative Syntheses of Quantitative Data. JMIR Mhealth Uhealth 2018;6(8):e10527 [https://doi.org/10.2196/10527](https://doi.org/10.2196/10527)
+3. Fuller D, Colwell E, Low J, Orychock K, Tobin M, Simango B, Buote R, Van Heerden D, Luan H, Cullen K, Slade L, Taylor N
+Reliability and Validity of Commercially Available Wearable Devices for Measuring Steps, Energy Expenditure, and Heart Rate: Systematic Review. JMIR Mhealth Uhealth 2020;8(9):e18694. [https://mhealth.jmir.org/2020/9/e18694](https://mhealth.jmir.org/2020/9/e18694)
 
 4. Video: [Wearable Devices](https://www.youtube.com/watch?v=SHGqVTf3L6s)
 
@@ -43,4 +44,4 @@ This week we will focus on reading a discussing the conceptual and general measu
 
 1. Make a 1-2 minute video introducing yourself to the class. Post a link to the Intro Video Forum on BrightSpace. 
 2. Write a blog post (max 500 words) describing the main discussion points of the readings. Use the HuffPo blogging guidelines (https://www.huffpost.com/entry/7-tips-for-writing-that-g_b_10724558) 
-3. Submit the blog to BrightSpace `Blog` Forum - Regular Assignment 1
+3. Submit the blog to BrightSpace `Communications/Discussions/Blog` Forum - Regular Assignment 1
