@@ -21,7 +21,7 @@ This week we you will be exploring the world of mobile apps and devices for phys
 
 ## Tasks
 
-1. Conduct a detailed review of 3 apps for collecting physical activity data in the Google Play or Apple App Store. Teh review should be ~500 words per app. 
+1. Conduct a detailed review of 3 apps for collecting physical activity data in the Google Play or Apple App Store. The review should be ~500 words per app. 
 
 The review should include the following:   
     i) App developer information: Who developed the app?   
@@ -75,5 +75,5 @@ Does the company or app sell your data? What measures are in place to keep your 
 
 ## Regular Assignment 3
 
-1. Create an RMarkdown file using the tempalte above and submit the `.Rmd` file to Brightspace.  
-3. Submit the RMarkdown file to BrightSpace `Blog` Forum - Regular Assignment 3
+1. Create an RMarkdown file using the template above and submit the `.Rmd` file to Brightspace.  
+3. Submit the RMarkdown file to BrightSpace `Assignments/App and Devive Review`
