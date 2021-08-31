@@ -39,4 +39,4 @@ This week we will focus on reading a discussing outcome evaluation. According th
 ## Regular Assignment 
 
 1. Write a blog post (max 500 words) describing the main discussion points of the readings. Use the HuffPo blogging guidelines (https://www.huffpost.com/entry/7-tips-for-writing-that-g_b_10724558) 
-2. Submit the blog to BrightSpace `Blog` Forum - Regular Assignment 
+2. Submit the blog to BrightSpace `Communications/Discussions/Blog` Forum - Regular Assignment 6
