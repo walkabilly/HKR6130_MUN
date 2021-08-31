@@ -44,15 +44,19 @@ __Note 1.__ I purposefuly do not have penalties for late assignments in my cours
 
 __Note 2.__ There are no specific formatting rules or guidelines for the course related to references. Use some type of reference formatting, APA and AMA are good choices. You will be using Markdown for most of the work so formatting mostly takes care of itself. 
 
+## HELP
+
+I will post all of the questions and response I get in the help file here [https://github.com/walkabilly/HKR6130_MUN/blob/master/help.md](https://github.com/walkabilly/HKR6130_MUN/blob/master/help.md). Use this to your advantage, particularly in the first weeks. 
+
 ### Regular Assignments									
 Regular assignments will be outlined in the Weekly Outline table. There are 6 regular assignments. Each regular assignent with be worth 6.66% of your mark. The list is here: 
 
 Assignment | Week | Description | Brightspace Location
--------- | -------- | ----- |---- | -----
+---------- | ------ | --------- |---------------------- 
 Regular Assignment 1 | Week 1 | Video and blog | __Discussions/Blog/Video and blog__
 Regular Assignment 2 | Week 3 | Intervention? and meeting with Dr. Fuller | __Discussions/Blog/Intervention?__
 Regular Assignment 3 | Week 4 | Apple Watch Data | __Assignments/Apple Watch Data__
-Regular Assignment 4 | Week 5 | App and Device Review | __Assignments/App and Device Review__
+Regular Assignment 4 | Week 5 | App and Device Review and meeting with Dr. Fuller | __Assignments/App and Device Review__
 Regular Assignment 5 | Week 7 | Process Evaluation | __Discussions/Blog/Process Evaluation__
 Regular Assignment 6 | Week 9 | Outcome Evaluation | __Discussions/Blog/Outcome Evaluation__
 
@@ -102,7 +106,6 @@ Submit RMarkdown or Word document to Brightspace (__Assignments/Intervention Pro
 2. You can include the information from your Intervention Proposal in the report. 
 3. Submit RMarkdown or Word document to Brightspace (__Assignments/Intervention Evaluation Report__)
 
-
 ## Academic Integrity
 Students and faculty at Memorial University share an important responsibility to maintain the integrity of the teaching and learning relationship.  This relationship is characterized by honesty, fairness and mutual respect for the aim and principles of the pursuit of education. 
  
@@ -119,7 +122,7 @@ In compliance with the Memorial University’s policy and equal access laws, it 
 
 
 Data | Week | Link | Assignment 
- ------------------------------------ | ---- | --- | ----
+---- | ---- | ---- | ------------
 9 September 2019 | 1 | [What is Physical Activity?](https://github.com/walkabilly/HKR6130_MUN/blob/master/physical_activity.md) | Regular Assignment 1 
 16 September 2019 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/r_intro.md) | Intro to R 
 23 September 2019 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention.md) | Regular Assignment 2 
@@ -132,10 +135,6 @@ Data | Week | Link | Assignment
 11 November 2019 | 10 |  [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/accel_data.md) | Accelerometer Data in R
 18 November 2019 | 11 | [Intervention Evaluation Consultation](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_consultation.md) | Meeting with Dr. Fuller
 25 November 2019 | 12 | [Recovery Week](https://www.youtube.com/watch?v=Ux8xAuQBdkk) | Intervention Evaluation Report Due 
-
-## HELP
-
-I will post all of the questions and response I get in the help file here [https://github.com/walkabilly/HKR6130_MUN/blob/master/help.md](https://github.com/walkabilly/HKR6130_MUN/blob/master/help.md). Use this to your advantage, particularly in the first weeks. 
 
 
 Thanks to [Jenny Bryan](https://twitter.com/jennybryan) for the inspiration and tutorials. 
