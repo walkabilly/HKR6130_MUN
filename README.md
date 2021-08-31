@@ -127,8 +127,8 @@ Data | Week | Link | Assignment
 20 September 2021 | 2 | [Intro to RMarkdown and R](https://github.com/walkabilly/HKR6130_MUN/blob/master/r_intro.md) | Intro to R 
 27 September 2021 | 3 | [What is an Intervention?](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention.md) | Regular Assignment 2 
 4 October 2021 | 4 | [Apple Watch Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/apple_watch_data.md) | Regular Assignment 3 
-11 October 2021 | 5 | [App and Device Review](https://github.com/walkabilly/HKR6130_MUN/blob/master/app_device_review.md) | Regular Assignment 4 
-18 October 2021 | 6 | [Recovery Week](https://www.youtube.com/watch?v=Ftm2uv7-Ybw) | Meeting with Dr. Fuller
+11 October 2021 | 5 | [Recovery Week](https://www.youtube.com/watch?v=Ftm2uv7-Ybw) | Meeting with Dr. Fuller 
+18 October 2021 | 6 | [App and Device Review](https://github.com/walkabilly/HKR6130_MUN/blob/master/app_device_review.md) | Regular Assignment 4 
 25 October 2021 | 7 | [Process Evaluation](https://github.com/walkabilly/HKR6130_MUN/blob/master/process_evaluation.md) | Regular Assignment 5  
 1 November 2021 | 8 |  [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_evaluation.md) | Intervention Proposal 
 8 November 2021 | 9 | [Outcome Evaluation](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation.md)  | Regular Assignment 6 
