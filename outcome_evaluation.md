@@ -22,9 +22,9 @@ This week we will focus on reading a discussing outcome evaluation. According th
 
 ## Readings 
 
-1. National  obesity  observatory. 2012. [Standard Evaluation Frameworkfor physical activity interventions](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation_uk.pdf)
+1. [National  Obesity  Observatory. Standard Evaluation Framework for physical activity interventions. 2012](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation_uk.pdf)
 
-2. World Health Organization. Outcome Evaluations. [Outcome Evaluation]("https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation_who.pdf")
+2. [World Health Organization. Outcome Evaluations. 2000](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation_who.pdf)
 
 3. Video: [Outcome Evaluation Webinar](https://youtu.be/Sva5JIj5CE4?t=246)
 
