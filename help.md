@@ -3,13 +3,24 @@ title: "HELP"
 author: "Daniel Fuller"
 date: "August 30, 2017"
 output:
-      html_document:
-        keep_md: true
+  html_document:
+    keep_md: yes
+  pdf_document: default
 ---
 
 
 
 # Help Page for HKR 6130
+
+## 2021
+
+1. In the methods of assessment table, the percentages of all of the assignments add up to 115%. Are one or two of them accidentally listed incorrectly?
+    * Sorry. Fixed it. This is a classic mistake... along with typos... that I will make in the course. Please just tell me and I will fix it. 
+
+2) In the weekly outline table, are the dates for when each week begins, or when the assignments for that week should be completed by?
+    * In the syllabus page the weeks are listed on the Monday. The assignment for that week is due on the Friday. For example, Week 1 (Sept 13) `What is physical activity?` the blog post is due on Sept 17. 
+    
+# General help
 
 > There is no geek gene
 
