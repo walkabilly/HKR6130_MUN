@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Computer Applications for Physical Activity Measurement and Intervention
 
 ## Instructor
@@ -33,11 +38,11 @@ There is no specific text for this course. A list of readings will provided for 
 
  Assignment | Percent
  ------------------------------------ | ---- 
- Regular Assignments | 40% 
+ Regular Assignments | 30% 
  Intro to R | 15% 
  Accelerometer Data in R | 15% 
  Intervention Proposal | 10% 
- Intervention Evaluation in R | 15% 
+ Intervention Evaluation in R | 10% 
  Intervention Evaluation	Report | 20% 
 
 __Note 1.__ I purposefuly do not have penalties for late assignments in my courses. You will have the most success with this course if you submit the assignments the weeks suggested. There will be a steep learning curve for R. It will hurt. The faster you get over the learning curve, the easier, and more fun, your life will be in this course.  
