@@ -9,7 +9,7 @@ output:
 
 
 
-## HKR 6130 Week 4  
+## HKR 6130 Accel Data
 
 ## Introduction
 
@@ -601,19 +601,5 @@ plot(fig2)
 ```
 
 ![](accel_data_solutions_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
-
-#### 7. Just for fun and only if you want I've coloured the approximate times of our vigorous activity with the time stamps. 
-
-```{}
-fig3 <- ggplot(accel_sec, aes(x = time, y = vec_mag_g)) + 
-          geom_rect(aes(xmin = "2017-08-29 10:18:00", xmax = "2017-08-29 10:20:00", ymin = 0, ymax = Inf), fill="grey",alpha=0.5) + 
-          geom_rect(aes(xmin = "2017-08-29 10:24:00", xmax = "2017-08-29 10:26:00", ymin = 0, ymax = Inf), fill="grey",alpha=0.5) + 
-            geom_point(alpha = 1/5, aes(colour = factor(activity))) + 
-            xlab("Time") +
-            ylab("Vector Magnitude")
-plot(fig3)
-```
-
-Awesome. Looks about right. I was probably off by a few seconds in the recording but overall not too bad. 
 
 ## You just processed 2 Million accelerometer records! Well done. 
