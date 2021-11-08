@@ -1,5 +1,5 @@
 ---
-title: "Week 4"
+title: "Accel Data"
 author: "Daniel Fuller"
 date: '2019-08-30'
 output:
@@ -9,7 +9,7 @@ output:
 
 
 
-## HKR 6130 Week 4  
+## HKR 6130 Accel Data
 
 ## Introduction
 
@@ -163,20 +163,13 @@ head(p1_hip)
 ```
 
 ```
-##                      time x_axis  y_axis  z_axis lux button temp id
-## 1 2017-08-29 09:30:00:500 0.0100 -0.0217 -1.0131 381      0 31.6 P1
-## 2 2017-08-29 09:30:00:510 0.0139 -0.0177 -1.0131 398      0 31.6 P1
-## 3 2017-08-29 09:30:00:520 0.0218 -0.0098 -1.0091 414      0 31.6 P1
-## 4 2017-08-29 09:30:00:530 0.0377 -0.0376 -1.0131 414      0 31.6 P1
-## 5 2017-08-29 09:30:00:540 0.0179 -0.0336 -1.0051 414      0 31.6 P1
-## 6 2017-08-29 09:30:00:550 0.0060 -0.0297 -1.0051 398      0 31.6 P1
-##   wear_loc
-## 1      hip
-## 2      hip
-## 3      hip
-## 4      hip
-## 5      hip
-## 6      hip
+##                      time x_axis  y_axis  z_axis lux button temp id wear_loc
+## 1 2017-08-29 09:30:00:500 0.0100 -0.0217 -1.0131 381      0 31.6 P1      hip
+## 2 2017-08-29 09:30:00:510 0.0139 -0.0177 -1.0131 398      0 31.6 P1      hip
+## 3 2017-08-29 09:30:00:520 0.0218 -0.0098 -1.0091 414      0 31.6 P1      hip
+## 4 2017-08-29 09:30:00:530 0.0377 -0.0376 -1.0131 414      0 31.6 P1      hip
+## 5 2017-08-29 09:30:00:540 0.0179 -0.0336 -1.0051 414      0 31.6 P1      hip
+## 6 2017-08-29 09:30:00:550 0.0060 -0.0297 -1.0051 398      0 31.6 P1      hip
 ```
 
 Wrist:  
@@ -186,41 +179,17 @@ head(p1_wrist)
 ```
 
 ```
-##                      time  x_axis  y_axis  z_axis lux button temp id
-## 1 2017-08-29 09:30:00:500 -0.9659 -0.0579 -0.4145 138      0 32.7 P1
-## 2 2017-08-29 09:30:00:510 -1.0550 -0.0740 -0.4829 138      0 32.7 P1
-## 3 2017-08-29 09:30:00:520 -1.1157 -0.0821 -0.4749 156      0 32.7 P1
-## 4 2017-08-29 09:30:00:530 -1.1116 -0.1303 -0.3623 156      0 32.7 P1
-## 5 2017-08-29 09:30:00:540 -1.0752 -0.1625 -0.4588 138      0 32.7 P1
-## 6 2017-08-29 09:30:00:550 -1.0550 -0.0981 -0.5633 156      0 32.7 P1
-##   wear_loc
-## 1    wrist
-## 2    wrist
-## 3    wrist
-## 4    wrist
-## 5    wrist
-## 6    wrist
+##                      time  x_axis  y_axis  z_axis lux button temp id wear_loc
+## 1 2017-08-29 09:30:00:500 -0.9659 -0.0579 -0.4145 138      0 32.7 P1    wrist
+## 2 2017-08-29 09:30:00:510 -1.0550 -0.0740 -0.4829 138      0 32.7 P1    wrist
+## 3 2017-08-29 09:30:00:520 -1.1157 -0.0821 -0.4749 156      0 32.7 P1    wrist
+## 4 2017-08-29 09:30:00:530 -1.1116 -0.1303 -0.3623 156      0 32.7 P1    wrist
+## 5 2017-08-29 09:30:00:540 -1.0752 -0.1625 -0.4588 138      0 32.7 P1    wrist
+## 6 2017-08-29 09:30:00:550 -1.0550 -0.0981 -0.5633 156      0 32.7 P1    wrist
 ```
 
 Now we can append (stack) the data together. 
 
-```
-## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
-```
-
-```
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-```
 
 The warning is telling us we are trying to combine character and factors. That's ok. The data was coerced and appended together.
 
@@ -230,20 +199,13 @@ head(accel_data)
 ```
 
 ```
-##                      time x_axis  y_axis  z_axis lux button temp id
-## 1 2017-08-29 09:30:00:500 0.0100 -0.0217 -1.0131 381      0 31.6 P1
-## 2 2017-08-29 09:30:00:510 0.0139 -0.0177 -1.0131 398      0 31.6 P1
-## 3 2017-08-29 09:30:00:520 0.0218 -0.0098 -1.0091 414      0 31.6 P1
-## 4 2017-08-29 09:30:00:530 0.0377 -0.0376 -1.0131 414      0 31.6 P1
-## 5 2017-08-29 09:30:00:540 0.0179 -0.0336 -1.0051 414      0 31.6 P1
-## 6 2017-08-29 09:30:00:550 0.0060 -0.0297 -1.0051 398      0 31.6 P1
-##   wear_loc
-## 1      hip
-## 2      hip
-## 3      hip
-## 4      hip
-## 5      hip
-## 6      hip
+##                      time x_axis  y_axis  z_axis lux button temp id wear_loc
+## 1 2017-08-29 09:30:00:500 0.0100 -0.0217 -1.0131 381      0 31.6 P1      hip
+## 2 2017-08-29 09:30:00:510 0.0139 -0.0177 -1.0131 398      0 31.6 P1      hip
+## 3 2017-08-29 09:30:00:520 0.0218 -0.0098 -1.0091 414      0 31.6 P1      hip
+## 4 2017-08-29 09:30:00:530 0.0377 -0.0376 -1.0131 414      0 31.6 P1      hip
+## 5 2017-08-29 09:30:00:540 0.0179 -0.0336 -1.0051 414      0 31.6 P1      hip
+## 6 2017-08-29 09:30:00:550 0.0060 -0.0297 -1.0051 398      0 31.6 P1      hip
 ```
 
 Quick gut check. Our previous dataframes had p1_hip = 511500, p1_wrist = 467700, p2_hip = 525900, p2_wrist = 500400. If we add those together we should get 2005500 = 2005500. Excellent.
@@ -297,20 +259,20 @@ glimpse(accel_sec_genea)
 ```
 
 ```
-## Observations: 20,055
-## Variables: 12
-## $ milli     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
-## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:500", …
-## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", …
-## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip"…
-## $ m_x_axis  <dbl> 0.022196, 0.020494, 0.021442, 0.020218, 0.021446, 0.02…
-## $ m_y_axis  <dbl> -0.034350, -0.034621, -0.034263, -0.034900, -0.033832,…
-## $ m_z_axis  <dbl> -1.00474, -1.00406, -1.00434, -1.00410, -1.00418, -1.0…
-## $ vec_mag   <dbl> 1.005635, 1.004927, 1.005210, 1.004977, 1.005044, 1.00…
-## $ vec_mag_g <dbl> 0.007686551, 0.007443477, 0.007521750, 0.007466425, 0.…
-## $ sd_x_axis <dbl> 0.008121028, 0.007577729, 0.007769432, 0.008493258, 0.…
-## $ sd_y_axis <dbl> 0.007909239, 0.008273339, 0.007395653, 0.007960661, 0.…
-## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, 0.…
+## Rows: 20,055
+## Columns: 12
+## $ milli     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…
+## $ time      <dttm> 2017-08-29 09:30:00, 2017-08-29 09:30:01, 2017-08-29 09:30:…
+## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", …
+## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip…
+## $ m_x_axis  <dbl> 0.022196, 0.020494, 0.021442, 0.020218, 0.021446, 0.020854, …
+## $ m_y_axis  <dbl> -0.034350, -0.034621, -0.034263, -0.034900, -0.033832, -0.03…
+## $ m_z_axis  <dbl> -1.00474, -1.00406, -1.00434, -1.00410, -1.00418, -1.00538, …
+## $ vec_mag   <dbl> 1.005635, 1.004927, 1.005210, 1.004977, 1.005044, 1.006297, …
+## $ vec_mag_g <dbl> 0.007686551, 0.007443477, 0.007521750, 0.007466425, 0.008552…
+## $ sd_x_axis <dbl> 0.008121028, 0.007577729, 0.007769432, 0.008493258, 0.008106…
+## $ sd_y_axis <dbl> 0.007909239, 0.008273339, 0.007395653, 0.007960661, 0.008165…
+## $ sd_z_axis <dbl> 0.007327160, 0.007598405, 0.007427930, 0.007507572, 0.008896…
 ```
 
 **Proper Method**  
@@ -322,23 +284,23 @@ glimpse(accel_sec)
 ```
 
 ```
-## Observations: 20,059
-## Variables: 14
+## Rows: 20,059
+## Columns: 14
 ## Groups: id, wear_loc, hour, minute [336]
-## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", …
-## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip"…
-## $ hour      <int> 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, …
-## $ minute    <int> 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30…
-## $ second    <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, …
-## $ time      <chr> "2017-08-29 09:30:00:500", "2017-08-29 09:30:01:000", …
-## $ m_x_axis  <dbl> 0.022946, 0.020813, 0.021126, 0.021446, 0.020292, 0.02…
-## $ m_y_axis  <dbl> -0.033392, -0.035144, -0.033906, -0.035097, -0.034545,…
-## $ m_z_axis  <dbl> -1.00534, -1.00374, -1.00470, -1.00434, -1.00434, -1.0…
-## $ vec_mag   <dbl> 1.006224, 1.004632, 1.005551, 1.005244, 1.005205, 1.00…
-## $ vec_mag_g <dbl> 0.008264282, 0.007040167, 0.007869534, 0.007576557, 0.…
-## $ sd_x_axis <dbl> 0.007838581, 0.008230734, 0.007622039, 0.007844749, 0.…
-## $ sd_y_axis <dbl> 0.008912885, 0.007604163, 0.007654124, 0.008075120, 0.…
-## $ sd_z_axis <dbl> 0.007768487, 0.007128716, 0.007531751, 0.007621236, 0.…
+## $ id        <chr> "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", "P1", …
+## $ wear_loc  <chr> "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip", "hip…
+## $ hour      <int> 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, …
+## $ minute    <int> 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, …
+## $ second    <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+## $ time      <dttm> 2017-08-29 09:30:00, 2017-08-29 09:30:01, 2017-08-29 09:30:…
+## $ m_x_axis  <dbl> 0.022946, 0.020813, 0.021126, 0.021446, 0.020292, 0.020579, …
+## $ m_y_axis  <dbl> -0.033392, -0.035144, -0.033906, -0.035097, -0.034545, -0.03…
+## $ m_z_axis  <dbl> -1.00534, -1.00374, -1.00470, -1.00434, -1.00434, -1.00402, …
+## $ vec_mag   <dbl> 1.006224, 1.004632, 1.005551, 1.005244, 1.005205, 1.004869, …
+## $ vec_mag_g <dbl> 0.008264282, 0.007040167, 0.007869534, 0.007576557, 0.007454…
+## $ sd_x_axis <dbl> 0.007838581, 0.008230734, 0.007622039, 0.007844749, 0.008415…
+## $ sd_y_axis <dbl> 0.008912885, 0.007604163, 0.007654124, 0.008075120, 0.007876…
+## $ sd_z_axis <dbl> 0.007768487, 0.007128716, 0.007531751, 0.007621236, 0.007340…
 ```
 
 
@@ -354,27 +316,27 @@ summary(accel_sec)
 ##                                        Mean   : 9.641   Mean   :32.9  
 ##                                        3rd Qu.:10.000   3rd Qu.:46.0  
 ##                                        Max.   :10.000   Max.   :59.0  
-##      second          time              m_x_axis           m_y_axis        
-##  Min.   : 0.00   Length:20059       Min.   :-1.42253   Min.   :-1.015853  
-##  1st Qu.:14.00   Class :character   1st Qu.:-0.79999   1st Qu.:-0.046400  
-##  Median :29.00   Mode  :character   Median :-0.29377   Median : 0.008874  
-##  Mean   :29.44                      Mean   :-0.26634   Mean   : 0.180734  
-##  3rd Qu.:44.00                      3rd Qu.: 0.01962   3rd Qu.: 0.392452  
-##  Max.   :59.00                      Max.   : 1.13246   Max.   : 1.507083  
-##     m_z_axis           vec_mag         vec_mag_g          sd_x_axis       
-##  Min.   :-1.06611   Min.   :0.7671   Min.   :0.005100   Min.   :0.003315  
-##  1st Qu.:-0.99265   1st Qu.:1.0055   1st Qu.:0.009222   1st Qu.:0.007880  
-##  Median :-0.33960   Median :1.0171   Median :0.073481   Median :0.101758  
-##  Mean   :-0.39050   Mean   :1.1090   Mean   :0.199987   Mean   :0.243840  
-##  3rd Qu.:-0.04864   3rd Qu.:1.1017   3rd Qu.:0.278038   3rd Qu.:0.303751  
-##  Max.   : 1.49243   Max.   :2.8017   Max.   :1.845207   Max.   :2.157539  
-##    sd_y_axis          sd_z_axis       
-##  Min.   :0.003479   Min.   :0.005634  
-##  1st Qu.:0.007260   1st Qu.:0.008966  
-##  Median :0.084678   Median :0.100044  
-##  Mean   :0.185981   Mean   :0.163476  
-##  3rd Qu.:0.249812   3rd Qu.:0.212789  
-##  Max.   :1.855834   Max.   :1.968616
+##      second           time                        m_x_axis       
+##  Min.   : 0.00   Min.   :2017-08-29 09:30:00   Min.   :-1.42253  
+##  1st Qu.:14.00   1st Qu.:2017-08-29 09:50:53   1st Qu.:-0.79999  
+##  Median :29.00   Median :2017-08-29 10:11:47   Median :-0.29377  
+##  Mean   :29.44   Mean   :2017-08-29 10:11:51   Mean   :-0.26634  
+##  3rd Qu.:44.00   3rd Qu.:2017-08-29 10:32:40   3rd Qu.: 0.01962  
+##  Max.   :59.00   Max.   :2017-08-29 10:57:39   Max.   : 1.13246  
+##     m_y_axis            m_z_axis           vec_mag         vec_mag_g       
+##  Min.   :-1.015853   Min.   :-1.06611   Min.   :0.7671   Min.   :0.005100  
+##  1st Qu.:-0.046400   1st Qu.:-0.99265   1st Qu.:1.0055   1st Qu.:0.009222  
+##  Median : 0.008874   Median :-0.33960   Median :1.0171   Median :0.073481  
+##  Mean   : 0.180734   Mean   :-0.39050   Mean   :1.1090   Mean   :0.199987  
+##  3rd Qu.: 0.392452   3rd Qu.:-0.04864   3rd Qu.:1.1017   3rd Qu.:0.278038  
+##  Max.   : 1.507083   Max.   : 1.49243   Max.   :2.8017   Max.   :1.845207  
+##    sd_x_axis          sd_y_axis          sd_z_axis       
+##  Min.   :0.003315   Min.   :0.003479   Min.   :0.005634  
+##  1st Qu.:0.007880   1st Qu.:0.007260   1st Qu.:0.008966  
+##  Median :0.101758   Median :0.084678   Median :0.100044  
+##  Mean   :0.243840   Mean   :0.185981   Mean   :0.163476  
+##  3rd Qu.:0.303751   3rd Qu.:0.249812   3rd Qu.:0.212789  
+##  Max.   :2.157539   Max.   :1.855834   Max.   :1.968616
 ```
 
 #### 5. Use the cut points from Reading 2, recode the vector magnitude variable, and create a new variable called `activity`. 
@@ -416,15 +378,11 @@ Now we will create a figure that colours the Vector Magnitude by our activity cu
 
 ![](accel_data_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 
-#### 7. Just for fun and only if you want I've coloured the approximate times of our vigorous activity with the time stamps. 
-
-![](accel_data_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
-
-Awesome. Looks about right. I was probably off by a few seconds in the recording but overall not too bad. 
-
 ## You just processed 2 Million accelerometer records! Well done. 
 
 ![Programmer](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)  
 
-[Dog](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif)  
+[Dog](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif) 
+
+# Solutions for can be found [here](https://github.com/walkabilly/HKR6130_MUN/blob/master/accel_data_solutions.md)
 
