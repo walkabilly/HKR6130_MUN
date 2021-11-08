@@ -130,7 +130,7 @@ Data | Week | Link | Assignment
 11 October 2021 | 5 | [Recovery Week](https://www.youtube.com/watch?v=Ftm2uv7-Ybw) | Meeting with Dr. Fuller 
 18 October 2021 | 6 | [App and Device Review](https://github.com/walkabilly/HKR6130_MUN/blob/master/app_device_review.md) | Regular Assignment 4 
 25 October 2021 | 7 | [Process Evaluation](https://github.com/walkabilly/HKR6130_MUN/blob/master/process_evaluation.md) | Regular Assignment 5  
-1 November 2021 | 8 |  [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_evaluation.md) | Intervention Proposal 
+1 November 2021 | 8 |  [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_evaluation.md) | Intervention Proposal + Intervention Evaluation in R
 8 November 2021 | 9 | [Outcome Evaluation](https://github.com/walkabilly/HKR6130_MUN/blob/master/outcome_evaluation.md)  | Regular Assignment 6 
 15 November 2021 | 10 |  [Accelerometer Data in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/accel_data.md) | Accelerometer Data in R
 22 November 2021 | 11 | [Intervention Evaluation Consultation](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_consultation.md) | Meeting with Dr. Fuller
