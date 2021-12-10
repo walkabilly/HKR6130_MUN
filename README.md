@@ -98,7 +98,7 @@ Submit RMarkdown or Word document to Brightspace (__Assignments/Intervention Pro
 
 ### Intervention Evaluation in R
 
-1. Complete the assignment posted at the end of the [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master) 
+1. Complete the assignment posted at the end of the [Intervention Evaluation in R](https://github.com/walkabilly/HKR6130_MUN/blob/master/intervention_evaluation.md) 
 2. Submit your data, Rmd file, and rendered PDF document to Brightspace (__Assignments/Intervention Evaluation in R__)
 
 ### Intervention Evaluation Report
